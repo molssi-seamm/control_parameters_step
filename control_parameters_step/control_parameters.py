@@ -107,7 +107,7 @@ class ControlParameters(seamm.Node):
             choices=[
                 'CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'
             ],
-            type=string.upper,
+            type=str.upper,
             help="the logging level for the Control Parameters step"
         )
 
@@ -210,7 +210,10 @@ class ControlParameters(seamm.Node):
             alias='control_parameters_step',
             module='control_parameters_step',
             level=1,
-            note='The principle citation for the control parameters step in SEAMM.'
+            note=(
+                'The principle citation for the control parameters step in '
+                'SEAMM.'
+            )
         )
         # Add other citations here or in the appropriate place in the code.
         # Add the bibtex to data/references.bib, and add a self.reference.cite

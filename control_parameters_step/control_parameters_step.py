@@ -72,7 +72,9 @@ class ControlParametersStep(object):
 
         """
 
-        return control_parameters_step.ControlParameters(flowchart=flowchart, **kwargs)
+        return control_parameters_step.ControlParameters(
+            flowchart=flowchart, **kwargs
+        )
 
     def create_tk_node(self, canvas=None, **kwargs):
         """Create and return the graphical Tk node object.
@@ -96,4 +98,6 @@ class ControlParametersStep(object):
         TkControlParameters
         """
 
-        return control_parameters_step.TkControlParameters(canvas=canvas, **kwargs)
+        return control_parameters_step.TkControlParameters(
+            canvas=canvas, **kwargs
+        )
