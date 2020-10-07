@@ -1,5 +1,5 @@
 Welcome to the documentation for the Control Parameters Step
-======================================
+============================================================
 
 Contents:
 
