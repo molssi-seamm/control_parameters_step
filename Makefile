@@ -60,7 +60,7 @@ typing: ## check typing
 	pytype $(MODULE)
 
 test: ## run tests quickly with the default Python
-	py.test
+	py.test -rP
 
 dependencies:
 	pur -r requirements_dev.txt
