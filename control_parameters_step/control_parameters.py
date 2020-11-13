@@ -368,7 +368,7 @@ class ControlParameters(seamm.Node):
             )
 
         printer.normal('')
-        
+
         # Add other citations here or in the appropriate place in the code.
         # Add the bibtex to data/references.bib, and add a self.reference.cite
         # similar to the above to actually add the citation to the references.
