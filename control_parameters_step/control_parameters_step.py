@@ -32,7 +32,7 @@ class ControlParametersStep(object):
             (
                 'An interface for Control Parameters'
             ),
-        'group': 'Simulations',
+        'group': 'Control',
         'name': 'Control Parameters'
     }  # yapf: disable
 

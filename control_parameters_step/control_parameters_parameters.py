@@ -78,14 +78,14 @@ class ControlParametersParameters(seamm.Parameters):
     """
 
     parameters = {
-        "time": {
-            "default": 100.0,
-            "kind": "float",
-            "default_units": "ps",
+        "variables": {
+            "default": {},
+            "kind": "dictionary",
+            "default_units": "",
             "enumeration": tuple(),
-            "format_string": ".1f",
-            "description": "Simulation time:",
-            "help_text": ("The time to simulate in the dynamics run.")
+            "format_string": "",
+            "description": "variables",
+            "help_text": "The variables to handle, with defaults, etc."
         },
     }
 
