@@ -1,3 +1,4 @@
-seamm
-seamm-util
-tabulate
+seamm==2020.12.4
+seamm-util==2020.12.2
+seamm-widgets==2020.12.4
+tabulate==0.8.7
