@@ -8,13 +8,14 @@ Installation
 Stable release
 --------------
 
-To install the Control Parameters Step, run this command in your terminal:
+To install the Control Parameters plug-in, run this command in your terminal:
 
 .. code-block:: console
 
     $ pip install control_parameters_step
 
-This is the preferred method to install Control Parameters Step, as it will always install the most recent stable release. 
+This is the preferred method to install Control Parameters
+plug-in, as it will always install the most recent stable release. 
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,7 +27,8 @@ you through the process.
 From sources
 ------------
 
-The sources for Control Parameters Step can be downloaded from the `Github repo`_.
+The sources for the Control Parameters plug-in can be downloaded
+from the `Github repo`_.
 
 You can either clone the public repository:
 
