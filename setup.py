@@ -2,14 +2,13 @@
 # -*- coding: utf-8 -*-
 
 """control_parameters_step
-A plug-in for SEAMM.
-Define command-line parameters for a flowchart.
+A plug-in for defining command-line parameters for a flowchart.
 """
 import sys
 from setuptools import setup, find_packages
 import versioneer
 
-short_description = __doc__.split("\n")
+short_description = __doc__.splitlines()[1]
 
 # from https://github.com/pytest-dev/pytest-runner#conditional-requirement
 needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
@@ -28,7 +27,7 @@ setup(
     name='control_parameters_step',
     author="Paul Saxe",
     author_email='psaxe@molssi.org',
-    description=short_description[2],
+    description=short_description,
     long_description=readme + '\n\n' + history,
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
@@ -64,7 +63,7 @@ setup(
     # prevent the .egg from being made
     zip_safe=True,
 
-    keywords='control_parameters_step',
+    keywords=['SEAMM', 'plug-in', 'flowchart'],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Science/Research',
