@@ -30,7 +30,7 @@ Control Parameters Step
    :target: https://pypi.python.org/pypi/control_parameters_step
    :alt: PyPi VERSION
 
-A step for control parameters in SEAMM
+A SEAMM plug-in for defining command-line parameters for a flowchart.
 
 * Free software: BSD-3-Clause
 * Documentation: https://molssi-seamm.github.io/control_parameters_step/index.html
