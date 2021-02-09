@@ -30,16 +30,48 @@ Control Parameters Step
    :target: https://pypi.python.org/pypi/control_parameters_step
    :alt: PyPi VERSION
 
-A plug-in for defining command-line parameters for a flowchart.
+Description
+===========
 
-* Free software: BSD-3-Clause
-* Documentation: https://molssi-seamm.github.io/control_parameters_step/index.html
+A SEAMM plug-in for defining command-line parameters for a
+flowchart. This plug-in provides a step in a SEAMM flowchart where a
+user can define required and optional arguments for the flowchart as a
+whole. When the flowchart is run, the command-line is parsed and the
+arguments placed in variables that can then be used by other steps.
+
+This can be used to pass file names or SMILES strings for the
+molecules to run; or give the temperature and pressure; or any
+appropriate parameters that the flowchart author feels are relevant.
+
+When run from the command-line, giving the option `--help` provides
+help on these control parameters as well as other options for the run::
+
+    bash-3.2$ ../flowcharts/psi4.flow --help
+    usage: ../flowcharts/psi4.flow [options] plug-in [options] plug-in [options] ...
+    
+    positional arguments:
+      SMILES                The SMILES string for the input molecule
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --method {b3lyp-d3mbj,mp2,ccsd}
+                            The type of calculation
+    ... 
+
+- Free software: BSD-3-Clause
+- Documentation: https://molssi-seamm.github.io/control_parameters_step/index.html
 
 
 Features
 --------
 
-* TODO
+- Graphical user interface (GUI) to define the parameters.
+- Mandatory and optional arguments, as well as flags for boolean
+  options.
+- Default values for optional arguments.
+- Follows standard, familiar  Unix conventions for command-line
+  arguments.
+- Help provided by `-h` or `--help` options.
 
 Credits
 ---------
@@ -48,4 +80,11 @@ This package was created with Cookiecutter_ and the `molssi-seamm/cookiecutter-s
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`molssi-seamm/cookiecutter-seamm-plugin`: https://github.com/molssi-seamm/cookiecutter-seamm-plugin
+
+Developed by the Molecular Sciences Software Institute (MolSSI_),
+which receives funding from the `National Science Foundation`_ under
+award ACI-1547580
+
+.. _MolSSI: https://www.molssi.org
+.. _`National Science Foundation`: https://www.nsf.gov
 
