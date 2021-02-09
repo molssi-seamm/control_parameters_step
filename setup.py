@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-control_parameters_step
-A step for control parameters in SEAMM
+"""control_parameters_step
+A plug-in for SEAMM.
+Define command-line parameters for a flowchart.
 """
 import sys
 from setuptools import setup, find_packages
@@ -28,7 +28,7 @@ setup(
     name='control_parameters_step',
     author="Paul Saxe",
     author_email='psaxe@molssi.org',
-    description=short_description[1],
+    description=short_description[2],
     long_description=readme + '\n\n' + history,
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
