@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """control_parameters_step
-A plug-in for defining command-line parameters for a flowchart.
+A SEAMM plug-in for defining command-line parameters for a flowchart.
 """
 import sys
 from setuptools import setup, find_packages
@@ -29,6 +29,7 @@ setup(
     author_email='psaxe@molssi.org',
     description=short_description,
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/x-rst',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     license="BSD-3-Clause",
