@@ -31,7 +31,7 @@ Control Parameters Step
    :alt: PyPi VERSION
 
 Description
-===========
+-----------
 
 A SEAMM plug-in for defining command-line parameters for a
 flowchart. This plug-in provides a step in a SEAMM flowchart where a
