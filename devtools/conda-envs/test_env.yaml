@@ -12,6 +12,7 @@ dependencies:
   - openbabel
 
   # Testing
+  - black
   - codecov
   - flake8
   - pytest
@@ -23,9 +24,6 @@ dependencies:
     - seamm-util
     - seamm-widgets
     - tabulate
-
-    # Testing
-    - yapf
 
     # Documentation
     - rinohtype
