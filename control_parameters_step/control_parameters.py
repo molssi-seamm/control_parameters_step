@@ -107,23 +107,23 @@ from seamm_util.printing import FormattedText as __
 
 logger = logging.getLogger(__name__)
 job = printing.getPrinter()
-printer = printing.getPrinter('Control Parameters')
+printer = printing.getPrinter("Control Parameters")
 
 
 types = {
-    'str': str,
-    'int': int,
-    'float': float,
-    'choice': list,
-    'bool': bool,
-    'list': list
+    "str": str,
+    "int": int,
+    "float": float,
+    "choice": list,
+    "bool": bool,
+    "list": list,
 }
 
 nargs_values = {
-    'a single value': None,
-    'an optional value': '?',
-    'zero or more values': '*',
-    'one or more values': '+'
+    "a single value": None,
+    "an optional value": "?",
+    "zero or more values": "*",
+    "one or more values": "+",
 }
 
 
@@ -150,11 +150,7 @@ class ControlParameters(seamm.Node):
     """
 
     def __init__(
-        self,
-        flowchart=None,
-        title='Control Parameters',
-        extension=None,
-        logger=logger
+        self, flowchart=None, title="Control Parameters", extension=None, logger=logger
     ):
         """A step for Control Parameters in a SEAMM flowchart.
 
@@ -177,27 +173,25 @@ class ControlParameters(seamm.Node):
         -------
         None
         """
-        logger.debug('Creating Control Parameters {}'.format(self))
+        logger.debug("Creating Control Parameters {}".format(self))
 
         super().__init__(
             flowchart=flowchart,
-            title='Control Parameters',
+            title="Control Parameters",
             extension=extension,
-            logger=logger
+            logger=logger,
         )  # yapf: disable
 
         self.parameters = control_parameters_step.ControlParametersParameters()
 
     @property
     def version(self):
-        """The semantic version of this module.
-        """
+        """The semantic version of this module."""
         return control_parameters_step.__version__
 
     @property
     def git_revision(self):
-        """The git version of this module.
-        """
+        """The git version of this module."""
         return control_parameters_step.__git_revision__
 
     def description_text(self, P=None):
@@ -221,29 +215,24 @@ class ControlParameters(seamm.Node):
         lines = []
         lines.append(
             textwrap.fill(
-                'The following variables will be set from command-line '
-                'arguments, or if not present, to the default value.'
+                "The following variables will be set from command-line "
+                "arguments, or if not present, to the default value."
             )
         )
-        variables = self.parameters['variables']
-        lines.append('')
+        variables = self.parameters["variables"]
+        lines.append("")
 
-        table = {
-            'Variable': [],
-            'Type': [],
-            'Default': [],
-            'Description': []
-        }
+        table = {"Variable": [], "Type": [], "Default": [], "Description": []}
 
         for name, data in variables.value.items():
-            table['Variable'].append(name)
-            table['Type'].append(data['type'])
-            table['Default'].append(data['default'])
-            table['Description'].append(textwrap.fill(data['help'], width=40))
+            table["Variable"].append(name)
+            table["Type"].append(data["type"])
+            table["Default"].append(data["default"])
+            table["Description"].append(textwrap.fill(data["help"], width=40))
 
-        lines.append(tabulate(table, headers='keys', tablefmt='grid'))
+        lines.append(tabulate(table, headers="keys", tablefmt="grid"))
 
-        return self.header + '\n' + textwrap.indent('\n'.join(lines), 4 * ' ')
+        return self.header + "\n" + textwrap.indent("\n".join(lines), 4 * " ")
 
     def run(self):
         """Run a Control Parameters step.
@@ -257,7 +246,7 @@ class ControlParameters(seamm.Node):
         seamm.Node
             The next node object in the flowchart.
         """
-        self.logger.debug('Entering the control parameters step run method')
+        self.logger.debug("Entering the control parameters step run method")
         next_node = super().run(printer)
 
         # Get the values of the parameters, dereferencing any variables
@@ -265,93 +254,95 @@ class ControlParameters(seamm.Node):
             context=seamm.flowchart_variables._data
         )
 
-        variables = P['variables']
+        variables = P["variables"]
 
         # Print what we are doing
         printer.important(
-            self.header + '\n' +
-            str(
+            self.header
+            + "\n"
+            + str(
                 __(
-                    'The following variables have been set from command-line '
-                    'arguments, environment variables, a configuration file, '
-                    '(.ini), or a default value, in that order.',
-                    indent=4 * ' '
+                    "The following variables have been set from command-line "
+                    "arguments, environment variables, a configuration file, "
+                    "(.ini), or a default value, in that order.",
+                    indent=4 * " ",
                 )
-            ) + '\n'
+            )
+            + "\n"
         )
 
         # Get the parser
         parser = seamm.getParser()
-        options = parser.get_options('SEAMM')
-        origins = parser.get_origins('SEAMM')
+        options = parser.get_options("SEAMM")
+        origins = parser.get_origins("SEAMM")
 
-        self.logger.debug(f'  Parsed options:\n{pprint.pformat(options)}\n')
-        self.logger.debug(f'Origin of values:\n{pprint.pformat(origins)}\n')
+        self.logger.debug(f"  Parsed options:\n{pprint.pformat(options)}\n")
+        self.logger.debug(f"Origin of values:\n{pprint.pformat(origins)}\n")
 
         table = {
-            'Variable': [],
-            'Value': [],
-            'O': [],
-            'Set From': [],
-            'Description': []
+            "Variable": [],
+            "Value": [],
+            "O": [],
+            "Set From": [],
+            "Description": [],
         }
 
         have_overwrite = False
         used_ini_file = False
         for dest, data in variables.items():
-            table['Variable'].append(dest)
+            table["Variable"].append(dest)
 
             value = options[dest]
 
             if dest in origins:
                 where = origins[dest]
             else:
-                where = 'command line'
+                where = "command line"
 
             if self.variable_exists(dest):
-                if data['overwrite'] == 'Yes':
+                if data["overwrite"] == "Yes":
                     self.set_variable(dest, options[dest])
-                    table['O'].append('*')
+                    table["O"].append("*")
                     have_overwrite = True
                 else:
                     value = self.get_variable(dest)
-                    where = 'existing'
-                    table['O'].append('')
+                    where = "existing"
+                    table["O"].append("")
             else:
                 self.set_variable(dest, options[dest])
 
             if isinstance(value, list):
                 if len(value) > 5:
-                    table['Value'].append('\n'.join(value[0:5]) + '\n...')
+                    table["Value"].append("\n".join(value[0:5]) + "\n...")
                 else:
-                    table['Value'].append('\n'.join(value))
+                    table["Value"].append("\n".join(value))
             else:
-                table['Value'].append(value)
+                table["Value"].append(value)
 
-            if where == 'configfile':
+            if where == "configfile":
                 used_ini_file = True
 
-            table['Set From'].append(where)
-            table['Description'].append(textwrap.fill(data['help'], width=40))
+            table["Set From"].append(where)
+            table["Description"].append(textwrap.fill(data["help"], width=40))
 
         if not have_overwrite:
-            del(table['O'])
+            del table["O"]
 
         printer.normal(
             __(
-                tabulate(table, headers='keys', tablefmt='grid'),
-                indent=4 * ' ',
+                tabulate(table, headers="keys", tablefmt="grid"),
+                indent=4 * " ",
                 wrap=False,
-                dedent=False
+                dedent=False,
             )
         )
 
         if have_overwrite:
             printer.normal(
                 __(
-                    '\n* = this variable existed, but was overwritten.',
-                    indent=4 * ' ',
-                    dedent=False
+                    "\n* = this variable existed, but was overwritten.",
+                    indent=4 * " ",
+                    dedent=False,
                 )
             )
 
@@ -359,28 +350,27 @@ class ControlParameters(seamm.Node):
             printer.normal(
                 __(
                     (
-                        '\nThe following .ini files were used: '
+                        "\nThe following .ini files were used: "
                         f'{", ".join(parser.get_ini_files())}.'
                     ),
-                    indent=4 * ' ',
-                    dedent=False
+                    indent=4 * " ",
+                    dedent=False,
                 )
             )
 
-        printer.normal('')
+        printer.normal("")
 
         # Add other citations here or in the appropriate place in the code.
         # Add the bibtex to data/references.bib, and add a self.reference.cite
         # similar to the above to actually add the citation to the references.
 
-        self.logger.debug('Leaving the control parameters step run method')
+        self.logger.debug("Leaving the control parameters step run method")
 
         return next_node
 
     def create_parser(self):
-        """Setup the command-line / config file parser
-        """
-        parser_name = 'control-parameters-step'
+        """Setup the command-line / config file parser"""
+        parser_name = "control-parameters-step"
         parser = seamm.getParser()
 
         # Remember if the parser exists ... this type of step may have been
@@ -393,20 +383,20 @@ class ControlParameters(seamm.Node):
         # This node is special in that the run() method is actually parsing
         # the options -- and they are in the SEAMM space. So set that up here
 
-        variables = self.parameters['variables'].value
+        variables = self.parameters["variables"].value
 
         # plugins = parser.add_argument_group('plug-ins')
         for dest, data in variables.items():
-            data_type = data['type']
+            data_type = data["type"]
             type_ = types[data_type]
-            default = type_(data['default'])
-            if data['optional'] == 'Yes':
-                name = '--' + dest
+            default = type_(data["default"])
+            if data["optional"] == "Yes":
+                name = "--" + dest
             else:
                 name = dest
-            nargs = nargs_values[data['nargs']]
-            choices = data['choices']
-            if choices == '':
+            nargs = nargs_values[data["nargs"]]
+            choices = data["choices"]
+            if choices == "":
                 choices = None
             else:
                 # choices is a string representation of a list
@@ -415,13 +405,13 @@ class ControlParameters(seamm.Node):
                     choices = None
 
             parser.add_argument(
-                'SEAMM',
+                "SEAMM",
                 name,
                 type=type_,
                 nargs=nargs,
                 default=default,
                 choices=choices,
-                help=data['help']
+                help=data["help"],
             )
 
         return result

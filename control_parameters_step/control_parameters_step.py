@@ -28,12 +28,9 @@ class ControlParametersStep(object):
     """
 
     my_description = {
-        'description':
-            (
-                'An interface for Control Parameters'
-            ),
-        'group': 'Control',
-        'name': 'Control Parameters'
+        "description": ("An interface for Control Parameters"),
+        "group": "Control",
+        "name": "Control Parameters",
     }  # yapf: disable
 
     def __init__(self, flowchart=None, gui=None):
@@ -44,8 +41,7 @@ class ControlParametersStep(object):
         pass
 
     def description(self):
-        """Return a description of what this extension does
-        """
+        """Return a description of what this extension does"""
         return ControlParametersStep.my_description
 
     def create_node(self, flowchart=None, **kwargs):
@@ -72,9 +68,7 @@ class ControlParametersStep(object):
 
         """
 
-        return control_parameters_step.ControlParameters(
-            flowchart=flowchart, **kwargs
-        )
+        return control_parameters_step.ControlParameters(flowchart=flowchart, **kwargs)
 
     def create_tk_node(self, canvas=None, **kwargs):
         """Create and return the graphical Tk node object.
@@ -98,6 +92,4 @@ class ControlParametersStep(object):
         TkControlParameters
         """
 
-        return control_parameters_step.TkControlParameters(
-            canvas=canvas, **kwargs
-        )
+        return control_parameters_step.TkControlParameters(canvas=canvas, **kwargs)

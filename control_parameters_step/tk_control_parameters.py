@@ -49,14 +49,7 @@ class TkControlParameters(seamm.TkNode):
     """
 
     def __init__(
-        self,
-        tk_flowchart=None,
-        node=None,
-        canvas=None,
-        x=None,
-        y=None,
-        w=200,
-        h=50
+        self, tk_flowchart=None, node=None, canvas=None, x=None, y=None, w=200, h=50
     ):
         """
         Initialize a graphical node.
@@ -92,13 +85,7 @@ class TkControlParameters(seamm.TkNode):
         self._edit = {}  # Widgets for the edit variable dialog
 
         super().__init__(
-            tk_flowchart=tk_flowchart,
-            node=node,
-            canvas=canvas,
-            x=x,
-            y=y,
-            w=w,
-            h=h
+            tk_flowchart=tk_flowchart, node=node, canvas=canvas, x=x, y=y, w=w, h=h
         )
 
     def create_dialog(self):
@@ -122,10 +109,10 @@ class TkControlParameters(seamm.TkNode):
 
         self.dialog = Pmw.Dialog(
             self.toplevel,
-            buttons=('OK', 'Help', 'Cancel'),
-            defaultbutton='OK',
-            title='Edit Control Parameters step',
-            command=self.handle_dialog
+            buttons=("OK", "Help", "Cancel"),
+            defaultbutton="OK",
+            title="Edit Control Parameters step",
+            command=self.handle_dialog,
         )
         self.dialog.withdraw()
 
@@ -134,27 +121,19 @@ class TkControlParameters(seamm.TkNode):
         # the widgets easier and allows loops, etc.
 
         # Create a frame to hold everything. This is always called 'frame'.
-        self['frame'] = ttk.Frame(self.dialog.interior())
-        self['frame'].pack(expand=tk.YES, fill=tk.BOTH)
+        self["frame"] = ttk.Frame(self.dialog.interior())
+        self["frame"].pack(expand=tk.YES, fill=tk.BOTH)
         # Shortcut for parameters
         P = self.node.parameters
 
         # Then create the widgets
-        self['variables'] = sw.ScrolledColumns(
-            self['frame'],
-            columns=[
-                '',
-                'Name',
-                'Overwrite?',
-                'Type',
-                'Default',
-                'Help'
-            ]
+        self["variables"] = sw.ScrolledColumns(
+            self["frame"], columns=["", "Name", "Overwrite?", "Type", "Default", "Help"]
         )
         # any remaining widgets
         for key in P:
             if key not in self:
-                self[key] = P[key].widget(self['frame'])
+                self[key] = P[key].widget(self["frame"])
 
     def reset_dialog(self, widget=None):
         """Layout the widgets in the dialog.
@@ -181,7 +160,7 @@ class TkControlParameters(seamm.TkNode):
         """
 
         # Remove any widgets previously packed
-        frame = self['frame']
+        frame = self["frame"]
         for slave in frame.grid_slaves():
             slave.grid_forget()
 
@@ -194,7 +173,7 @@ class TkControlParameters(seamm.TkNode):
         widgets = []
 
         # Variables table first
-        key = 'variables'
+        key = "variables"
         self[key].grid(row=row, column=0, sticky=tk.NSEW)
         frame.columnconfigure(0, weight=1)
         frame.rowconfigure(row, weight=1)
@@ -252,11 +231,11 @@ class TkControlParameters(seamm.TkNode):
             self.create_dialog()
 
         P = self.node.parameters
-        self._variables = P['variables'].value
+        self._variables = P["variables"].value
         self.reset_dialog()
         self.reset_table()
 
-        self.dialog.activate(geometry='centerscreenfirst')
+        self.dialog.activate(geometry="centerscreenfirst")
 
     def handle_dialog(self, result):
         """Handle the closing of the edit dialog
@@ -276,20 +255,18 @@ class TkControlParameters(seamm.TkNode):
         None
         """
 
-        if result is None or result == 'Cancel':
+        if result is None or result == "Cancel":
             self.dialog.deactivate(result)
             self._variables = None
             return
 
-        if result == 'Help':
+        if result == "Help":
             # display help!!!
             return
 
         if result != "OK":
             self.dialog.deactivate(result)
-            raise RuntimeError(
-                "Don't recognize dialog result '{}'".format(result)
-            )
+            raise RuntimeError("Don't recognize dialog result '{}'".format(result))
 
         self.dialog.deactivate(result)
         # Shortcut for parameters
@@ -298,11 +275,11 @@ class TkControlParameters(seamm.TkNode):
         # Get the values for all the widgets. This may be overkill, but
         # it is easy! You can sort out what it all means later, or
         # be a bit more selective.
-        P['variables'].value = self._variables
+        P["variables"].value = self._variables
         self._variables = None
 
         for key in P:
-            if key != 'variables':
+            if key != "variables":
                 P[key].set_from_widget()
 
     def handle_help(self):
@@ -316,25 +293,24 @@ class TkControlParameters(seamm.TkNode):
         -------
         None
         """
-        print('Help not implemented yet for Control Parameters!')
+        print("Help not implemented yet for Control Parameters!")
 
     def add_variable(self):
-        """Add a new variable to the table.
-        """
+        """Add a new variable to the table."""
         # Post dialog to fill out the new variable
         if self._new_variable_dialog is None:
             self.create_new_variable_dialog()
 
-        self._new['name'].set('')
-        self._new['type'].set('float')
-        self._new['optional'].set('Yes')
-        self._new['nargs'].set('a single value')
-        self._new['overwrite'].set('No')
-        self._new['default'].set('')
-        self._new['choices'].set('[]')
-        self._new['help'].set('')
+        self._new["name"].set("")
+        self._new["type"].set("float")
+        self._new["optional"].set("Yes")
+        self._new["nargs"].set("a single value")
+        self._new["overwrite"].set("No")
+        self._new["default"].set("")
+        self._new["choices"].set("[]")
+        self._new["help"].set("")
 
-        self._new_variable_dialog.activate(geometry='centerscreenfirst')
+        self._new_variable_dialog.activate(geometry="centerscreenfirst")
 
     def create_new_variable_dialog(self):
         """
@@ -353,87 +329,79 @@ class TkControlParameters(seamm.TkNode):
 
         dialog = self._new_variable_dialog = Pmw.Dialog(
             self.dialog.interior(),
-            buttons=('OK', 'Cancel'),
-            defaultbutton='OK',
-            title='Add Variable',
-            command=self.handle_new_variable_dialog
+            buttons=("OK", "Cancel"),
+            defaultbutton="OK",
+            title="Add Variable",
+            command=self.handle_new_variable_dialog,
         )
         self._new_variable_dialog.withdraw()
 
         # Create a frame to hold everything in the dialog
-        frame = self._new['frame'] = ttk.Frame(dialog.interior())
+        frame = self._new["frame"] = ttk.Frame(dialog.interior())
         frame.pack(expand=tk.YES, fill=tk.BOTH)
 
         # Then create the widgets
-        self._new['name'] = sw.LabeledEntry(frame, labeltext='Name')
-        self._new['optional'] = sw.LabeledCombobox(
+        self._new["name"] = sw.LabeledEntry(frame, labeltext="Name")
+        self._new["optional"] = sw.LabeledCombobox(
+            frame, labeltext="Type:", values=("Yes", "No")
+        )
+        self._new["type"] = sw.LabeledCombobox(
             frame,
-            labeltext='Type:',
+            labeltext="Type:",
             values=(
-                'Yes',
-                'No'
-            )
+                "str",
+                "int",
+                "float",
+                "bool",
+            ),
         )
-        self._new['type'] = sw.LabeledCombobox(
+        self._new["nargs"] = sw.LabeledCombobox(
             frame,
-            labeltext='Type:',
+            labeltext="Number of values:",
             values=(
-                'str',
-                'int',
-                'float',
-                'bool',
-            )
+                "a single value",
+                "an optional value",
+                "zero or more values",
+                "one or more values",
+            ),
         )
-        self._new['nargs'] = sw.LabeledCombobox(
-            frame,
-            labeltext='Number of values:',
-            values=(
-                'a single value',
-                'an optional value',
-                'zero or more values',
-                'one or more values',
-            )
+        self._new["overwrite"] = sw.LabeledCombobox(
+            frame, labeltext="Overwrite if exists:", values=("Yes", "No")
         )
-        self._new['overwrite'] = sw.LabeledCombobox(
-            frame, labeltext='Overwrite if exists:', values=('Yes', 'No')
-        )
-        self._new['default'] = sw.LabeledEntry(frame, labeltext='Default:')
-        self._new['choices'] = sw.LabeledEntry(frame, labeltext='Choices:')
-        self._new['help'] = sw.LabeledEntry(frame, labeltext='Help:')
+        self._new["default"] = sw.LabeledEntry(frame, labeltext="Default:")
+        self._new["choices"] = sw.LabeledEntry(frame, labeltext="Choices:")
+        self._new["help"] = sw.LabeledEntry(frame, labeltext="Help:")
 
         # and lay them out
         self.reset_new_variable_dialog()
 
     def reset_new_variable_dialog(self):
-        """Lay the dialog out based on the contents.
-        """
+        """Lay the dialog out based on the contents."""
         # Remove any widgets previously packed
-        frame = self._new['frame']
+        frame = self._new["frame"]
         for slave in frame.grid_slaves():
             slave.grid_forget()
 
         row = 0
         widgets = []
 
-        for key in ('name', 'overwrite', 'type', 'nargs'):
-            self._new[key].grid(
-                row=row, column=0, sticky=tk.EW
-            )
+        for key in ("name", "overwrite", "type", "nargs"):
+            self._new[key].grid(row=row, column=0, sticky=tk.EW)
             widgets.append(self._new[key])
             row += 1
 
-        type_ = self._new['type'].get()
-        if type_ != 'bool':
-            w = self._new['default']
+        type_ = self._new["type"].get()
+        if type_ != "bool":
+            w = self._new["default"]
             w.grid(row=row, column=0, sticky=tk.EW)
             widgets.append(w)
             row += 1
-            w = self._new['choices']
+            w = self._new["choices"]
             w.grid(row=row, column=0, sticky=tk.EW)
             widgets.append(w)
             row += 1
-        self._new['help'].grid(row=row, column=0, sticky=tk.EW)
-        widgets.append(self._new['help'])
+        self._new["help"].grid(row=row, column=0, sticky=tk.EW)
+        widgets.append(self._new["help"])
         row += 1
 
         sw.align_labels(widgets)
@@ -456,34 +424,31 @@ class TkControlParameters(seamm.TkNode):
         None
         """
 
-        if result is None or result == 'Cancel':
+        if result is None or result == "Cancel":
             self._new_variable_dialog.deactivate(result)
             self._variables = None
             return
 
         if result != "OK":
             self._new_variable_dialog.deactivate(result)
-            raise RuntimeError(
-                f"Don't recognize new variable dialog result '{result}'"
-            )
+            raise RuntimeError(f"Don't recognize new variable dialog result '{result}'")
 
         self._new_variable_dialog.deactivate(result)
 
-        name = self._new['name'].get()
+        name = self._new["name"].get()
         if name in self._variables:
             raise KeyError(f"Duplicate variable name: '{name}'")
 
         data = self._variables[name] = {}
         for key, w in self._new.items():
-            if key not in ('frame', 'name'):
+            if key not in ("frame", "name"):
                 data[key] = w.get()
 
         self.reset_table()
 
     def reset_table(self):
-        """Update the table of variables to the current data.
-        """
-        table = self['variables']
+        """Update the table of variables to the current data."""
+        table = self["variables"]
 
         frame = table.table.interior()
         table.clear()
@@ -492,49 +457,46 @@ class TkControlParameters(seamm.TkNode):
         for name, data in self._variables.items():
             table[row, 0] = ttk.Button(
                 frame,
-                text='Edit',
+                text="Edit",
                 width=5,
                 command=lambda: self.edit_variable(name),
-                takefocus=True
+                takefocus=True,
             )
             table[row, 1] = name
-            table[row, 2] = data['overwrite']
-            table[row, 3] = data['type']
-            if data['type'] != 'bool':
-                table[row, 4] = data['default']
-            table[row, 5] = data['help']
+            table[row, 2] = data["overwrite"]
+            table[row, 3] = data["type"]
+            if data["type"] != "bool":
+                table[row, 4] = data["default"]
+            table[row, 5] = data["help"]
             row += 1
 
         # a button to add new variables...
         table[row, 0] = ttk.Button(
-            frame,
-            text='+',
-            width=5,
-            command=self.add_variable,
-            takefocus=True
+            frame, text="+", width=5, command=self.add_variable, takefocus=True
         )
 
         table.update_idletasks()
 
     def edit_variable(self, name):
-        """Edit the values associated with a variable.
-        """
+        """Edit the values associated with a variable."""
         # Post dialog to fill out the new variable
         if self._edit_variable_dialog is None:
             self.create_edit_variable_dialog()
 
         self._edit_variable_dialog.configure(
-            command=lambda result: self.handle_edit_variable_dialog(name, result)  # noqa: E501
+            command=lambda result: self.handle_edit_variable_dialog(
+                name, result
+            )  # noqa: E501
         )
 
         data = self._variables[name]
         for key, w in self._edit.items():
-            if key == 'name':
+            if key == "name":
                 w.set(name)
-            elif key != 'frame':
+            elif key != "frame":
                 w.set(data[key])
 
-        self._edit_variable_dialog.activate(geometry='centerscreenfirst')
+        self._edit_variable_dialog.activate(geometry="centerscreenfirst")
 
     def create_edit_variable_dialog(self):
         """
@@ -553,87 +515,79 @@ class TkControlParameters(seamm.TkNode):
 
         dialog = self._edit_variable_dialog = Pmw.Dialog(
             self.dialog.interior(),
-            buttons=('OK', 'Cancel'),
-            defaultbutton='OK',
-            title='Add Variable',
-            command=lambda: self.handle_edit_variable_dialog
+            buttons=("OK", "Cancel"),
+            defaultbutton="OK",
+            title="Add Variable",
+            command=lambda: self.handle_edit_variable_dialog,
         )
         self._edit_variable_dialog.withdraw()
 
         # Create a frame to hold everything in the dialog
-        frame = self._edit['frame'] = ttk.Frame(dialog.interior())
+        frame = self._edit["frame"] = ttk.Frame(dialog.interior())
         frame.pack(expand=tk.YES, fill=tk.BOTH)
 
         # Then create the widgets
-        self._edit['name'] = sw.LabeledEntry(frame, labeltext='Name')
-        self._edit['optional'] = sw.LabeledCombobox(
+        self._edit["name"] = sw.LabeledEntry(frame, labeltext="Name")
+        self._edit["optional"] = sw.LabeledCombobox(
+            frame, labeltext="Type:", values=("Yes", "No")
+        )
+        self._edit["type"] = sw.LabeledCombobox(
             frame,
-            labeltext='Type:',
+            labeltext="Type:",
             values=(
-                'Yes',
-                'No'
-            )
+                "str",
+                "int",
+                "float",
+                "bool",
+            ),
         )
-        self._edit['type'] = sw.LabeledCombobox(
+        self._edit["nargs"] = sw.LabeledCombobox(
             frame,
-            labeltext='Type:',
+            labeltext="Number of values:",
             values=(
-                'str',
-                'int',
-                'float',
-                'bool',
-            )
+                "a single value",
+                "an optional value",
+                "zero or more values",
+                "one or more",
+            ),
         )
-        self._edit['nargs'] = sw.LabeledCombobox(
-            frame,
-            labeltext='Number of values:',
-            values=(
-                'a single value',
-                'an optional value',
-                'zero or more values',
-                'one or more',
-            )
+        self._edit["overwrite"] = sw.LabeledCombobox(
+            frame, labeltext="Overwrite if exists:", values=("Yes", "No")
         )
-        self._edit['overwrite'] = sw.LabeledCombobox(
-            frame, labeltext='Overwrite if exists:', values=('Yes', 'No')
-        )
-        self._edit['default'] = sw.LabeledEntry(frame, labeltext='Default:')
-        self._edit['choices'] = sw.LabeledEntry(frame, labeltext='Choices:')
-        self._edit['help'] = sw.LabeledEntry(frame, labeltext='Help:')
+        self._edit["default"] = sw.LabeledEntry(frame, labeltext="Default:")
+        self._edit["choices"] = sw.LabeledEntry(frame, labeltext="Choices:")
+        self._edit["help"] = sw.LabeledEntry(frame, labeltext="Help:")
 
         # and lay them out
         self.reset_edit_variable_dialog()
 
     def reset_edit_variable_dialog(self):
-        """Lay the dialog out based on the contents.
-        """
+        """Lay the dialog out based on the contents."""
         # Remove any widgets previously packed
-        frame = self._edit['frame']
+        frame = self._edit["frame"]
         for slave in frame.grid_slaves():
             slave.grid_forget()
 
         row = 0
         widgets = []
 
-        for key in ('name', 'overwrite', 'type', 'nargs'):
-            self._edit[key].grid(
-                row=row, column=0, sticky=tk.EW
-            )
+        for key in ("name", "overwrite", "type", "nargs"):
+            self._edit[key].grid(row=row, column=0, sticky=tk.EW)
             widgets.append(self._edit[key])
             row += 1
 
-        type_ = self._edit['type'].get()
-        if type_ != 'bool':
-            w = self._edit['default']
+        type_ = self._edit["type"].get()
+        if type_ != "bool":
+            w = self._edit["default"]
             w.grid(row=row, column=0, sticky=tk.EW)
             widgets.append(w)
             row += 1
-            w = self._edit['choices']
+            w = self._edit["choices"]
             w.grid(row=row, column=0, sticky=tk.EW)
             widgets.append(w)
             row += 1
-        self._edit['help'].grid(row=row, column=0, sticky=tk.EW)
-        widgets.append(self._edit['help'])
+        self._edit["help"].grid(row=row, column=0, sticky=tk.EW)
+        widgets.append(self._edit["help"])
         row += 1
 
         sw.align_labels(widgets)
@@ -656,7 +610,7 @@ class TkControlParameters(seamm.TkNode):
         None
         """
 
-        if result is None or result == 'Cancel':
+        if result is None or result == "Cancel":
             self._edit_variable_dialog.deactivate(result)
             self._variables = None
             return
@@ -669,7 +623,7 @@ class TkControlParameters(seamm.TkNode):
 
         self._edit_variable_dialog.deactivate(result)
 
-        new_name = self._edit['name'].get().lstrip('-')
+        new_name = self._edit["name"].get().lstrip("-")
         if new_name == name:
             data = self._variables[name]
         else:
@@ -678,7 +632,7 @@ class TkControlParameters(seamm.TkNode):
             data = self._variables[name] = {}
 
         for key, w in self._edit.items():
-            if key not in ('frame', 'name'):
+            if key not in ("frame", "name"):
                 data[key] = w.get()
 
         self.reset_table()

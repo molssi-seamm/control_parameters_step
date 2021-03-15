@@ -85,7 +85,7 @@ class ControlParametersParameters(seamm.Parameters):
             "enumeration": tuple(),
             "format_string": "",
             "description": "variables",
-            "help_text": "The variables to handle, with defaults, etc."
+            "help_text": "The variables to handle, with defaults, etc.",
         },
     }
 
@@ -107,9 +107,8 @@ class ControlParametersParameters(seamm.Parameters):
         None
         """
 
-        logger.debug('ControlParametersParameters.__init__')
+        logger.debug("ControlParametersParameters.__init__")
 
         super().__init__(
-            defaults={**ControlParametersParameters.parameters, **defaults},
-            data=data
+            defaults={**ControlParametersParameters.parameters, **defaults}, data=data
         )
