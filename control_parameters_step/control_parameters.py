@@ -93,6 +93,7 @@ from tabulate import tabulate
 
 import control_parameters_step
 import seamm
+import seamm_util
 from seamm_util import ureg, Q_  # noqa: F401
 import seamm_util.printing as printing
 from seamm_util.printing import FormattedText as __
@@ -272,7 +273,7 @@ class ControlParameters(seamm.Node):
         )
 
         # Get the parser
-        parser = seamm.getParser()
+        parser = seamm_util.getParser()
         options = parser.get_options("SEAMM")
         origins = parser.get_origins("SEAMM")
 
@@ -371,7 +372,7 @@ class ControlParameters(seamm.Node):
     def create_parser(self):
         """Setup the command-line / config file parser"""
         parser_name = "control-parameters-step"
-        parser = seamm.getParser()
+        parser = seamm_util.getParser()
 
         # Remember if the parser exists ... this type of step may have been
         # found before
