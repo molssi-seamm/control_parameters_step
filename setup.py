@@ -78,10 +78,10 @@ setup(
     ],
     entry_points={
         'org.molssi.seamm': [
-            'Control Parameters = control_parameters_step:ControlParametersStep',
+            'Parameters = control_parameters_step:ControlParametersStep',
         ],
         'org.molssi.seamm.tk': [
-            'Control Parameters = control_parameters_step:ControlParametersStep',
+            'Parameters = control_parameters_step:ControlParametersStep',
         ],
     }
 )
