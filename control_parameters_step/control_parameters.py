@@ -178,7 +178,7 @@ class ControlParameters(seamm.Node):
 
         super().__init__(
             flowchart=flowchart,
-            title="Control Parameters",
+            title="Parameters",
             extension=extension,
             logger=logger,
         )  # yapf: disable
