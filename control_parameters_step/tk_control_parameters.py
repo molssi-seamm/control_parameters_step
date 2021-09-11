@@ -106,7 +106,7 @@ class TkControlParameters(seamm.TkNode):
         --------
         TkControlParameters.reset_dialog
         """
-        frame = super().create_dialog("Edit LAMMPS Step")
+        frame = super().create_dialog("Edit Parameters")
 
         # make it large!
         screen_w = self.dialog.winfo_screenwidth()
