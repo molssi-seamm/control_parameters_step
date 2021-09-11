@@ -151,7 +151,7 @@ class ControlParameters(seamm.Node):
     """
 
     def __init__(
-        self, flowchart=None, title="Control Parameters", extension=None, logger=logger
+        self, flowchart=None, title="Parameters", extension=None, logger=logger
     ):
         """A step for Control Parameters in a SEAMM flowchart.
 
