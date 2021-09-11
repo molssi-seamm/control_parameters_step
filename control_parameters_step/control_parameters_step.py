@@ -30,7 +30,7 @@ class ControlParametersStep(object):
     my_description = {
         "description": ("An interface for Control Parameters"),
         "group": "Control",
-        "name": "Control Parameters",
+        "name": "Parameters",
     }  # yapf: disable
 
     def __init__(self, flowchart=None, gui=None):
