@@ -8,8 +8,9 @@ dependencies:
   - python
   - pip
 
-  # molsystem requires, and only available via Conda.
-  - openbabel
+  # Dependencies for this module
+  - seamm
+  - tabulate
 
   # Testing
   - black
@@ -20,10 +21,6 @@ dependencies:
 
     # Pip-only installs
   - pip:
-    - seamm
-    - seamm-util
-    - seamm-widgets
-    - tabulate
 
     # Documentation
     - rinohtype
