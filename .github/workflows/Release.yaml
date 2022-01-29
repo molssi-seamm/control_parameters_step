@@ -36,7 +36,7 @@ jobs:
     - name: Run linters
       shell: bash -l {0}
       run: |
-        black --check --diff control_parameters_step tests
+        black --extend-exclude '_version.py' --check --diff control_parameters_step tests
         flake8 control_parameters_step tests
 
   test:
