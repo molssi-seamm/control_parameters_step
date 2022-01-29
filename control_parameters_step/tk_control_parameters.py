@@ -360,6 +360,7 @@ class TkControlParameters(seamm.TkNode):
                 "int",
                 "float",
                 "bool",
+                "file",
             ),
             state="readonly",
         )
@@ -553,6 +554,7 @@ class TkControlParameters(seamm.TkNode):
                 "int",
                 "float",
                 "bool",
+                "file",
             ),
             state="readonly",
         )

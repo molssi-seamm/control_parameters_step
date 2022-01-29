@@ -112,6 +112,7 @@ printer = printing.getPrinter("Control Parameters")
 
 
 types = {
+    "file": str,
     "str": str,
     "int": int,
     "float": float,
@@ -302,7 +303,22 @@ class ControlParameters(seamm.Node):
 
             if self.variable_exists(dest):
                 if data["overwrite"] == "Yes":
-                    self.set_variable(dest, options[dest])
+                    if data["type"] == "file":
+                        if isinstance(value, list):
+                            paths = []
+                            tmp = []
+                            for val in value:
+                                path = self.file_path(val)
+                                tmp.append(str(path))
+                                paths.append(path)
+                            value = tmp
+                            self.set_variable(dest, paths)
+                        else:
+                            path = self.file_path(value)
+                            value = str(path)
+                            self.set_variable(dest, path)
+                    else:
+                        self.set_variable(dest, value)
                     table["O"].append("*")
                     have_overwrite = True
                 else:
@@ -310,7 +326,22 @@ class ControlParameters(seamm.Node):
                     where = "existing"
                     table["O"].append("")
             else:
-                self.set_variable(dest, options[dest])
+                if data["type"] == "file":
+                    if isinstance(value, list):
+                        paths = []
+                        tmp = []
+                        for val in value:
+                            path = self.file_path(val)
+                            tmp.append(str(path))
+                            paths.append(path)
+                        value = tmp
+                        self.set_variable(dest, paths)
+                    else:
+                        path = self.file_path(value)
+                        value = str(path)
+                        self.set_variable(dest, path)
+                else:
+                    self.set_variable(dest, value)
 
             if isinstance(value, list):
                 if len(value) > 5:
