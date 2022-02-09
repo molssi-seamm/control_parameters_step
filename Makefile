@@ -1,6 +1,7 @@
 MODULE := control_parameters_step
-.PHONY: clean clean-test clean-pyc clean-build docs help
+.PHONY: help clean clean-build clean-test clean-pyc lint format test coverage coverage-html docs servedocs release check-release dist
 .DEFAULT_GOAL := help
+
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
 try:
@@ -10,6 +11,7 @@ except:
 
 webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
 endef
+
 export BROWSER_PYSCRIPT
 
 define PRINT_HELP_PYSCRIPT
@@ -21,7 +23,9 @@ for line in sys.stdin:
 		target, help = match.groups()
 		print("%-20s %s" % (target, help))
 endef
+
 export PRINT_HELP_PYSCRIPT
+
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
 help:
@@ -56,23 +60,14 @@ lint: ## check style with black and flake8
 format: ## reformat with with yapf and isort
 	black --extend-exclude '_version.py' $(MODULE) tests
 
-typing: ## check typing
-	pytype $(MODULE)
-
 test: ## run tests quickly with the default Python
-	py.test
-
-dependencies:
-	pur -r requirements_dev.txt
-	pip install -r requirements_dev.txt
-
-test-all: ## run tests on every Python version with tox
-	tox
+	pytest tests/
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source $(MODULE) -m pytest
-	coverage report -m
-	coverage html
+	pytest -v --cov=$(MODULE) --cov-report term --color=yes tests/
+
+coverage-html: ## check code coverage quickly with the default Python, showing as html
+	pytest -v --cov=$(MODULE) --cov-report=html:htmlcov --cov-report term --color=yes tests/
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
