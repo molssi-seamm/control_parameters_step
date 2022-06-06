@@ -439,7 +439,6 @@ class TkControlParameters(seamm.TkNode):
 
         if result is None or result == "Cancel":
             self._new_variable_dialog.deactivate(result)
-            self._variables = None
             return
 
         if result != "OK":
@@ -470,19 +469,26 @@ class TkControlParameters(seamm.TkNode):
         for name, data in self._variables.items():
             table[row, 0] = ttk.Button(
                 frame,
-                text="Edit",
+                text="-",
                 width=5,
-                command=lambda: self.edit_variable(name),
+                command=lambda nm=name: self.remove_variable(nm),
                 takefocus=True,
             )
-            table[row, 1] = name
-            table[row, 2] = data["type"]
-            table[row, 3] = data["nargs"]
-            table[row, 4] = data["optional"]
-            table[row, 5] = data["overwrite"]
+            table[row, 1] = ttk.Button(
+                frame,
+                text="Edit",
+                width=5,
+                command=lambda nm=name: self.edit_variable(nm),
+                takefocus=True,
+            )
+            table[row, 2] = name
+            table[row, 3] = data["type"]
+            table[row, 4] = data["nargs"]
+            table[row, 5] = data["optional"]
+            table[row, 6] = data["overwrite"]
             if data["type"] != "bool":
-                table[row, 6] = data["default"]
-            table[row, 7] = data["help"]
+                table[row, 7] = data["default"]
+            table[row, 8] = data["help"]
             row += 1
 
         # a button to add new variables...
@@ -499,8 +505,8 @@ class TkControlParameters(seamm.TkNode):
             self.create_edit_variable_dialog()
 
         self._edit_variable_dialog.configure(
-            command=lambda result: self.handle_edit_variable_dialog(
-                name, result
+            command=lambda result, nm=name: self.handle_edit_variable_dialog(
+                nm, result
             )  # noqa: E501
         )
 
@@ -636,7 +642,6 @@ class TkControlParameters(seamm.TkNode):
 
         if result is None or result == "Cancel":
             self._edit_variable_dialog.deactivate(result)
-            self._variables = None
             return
 
         if result != "OK":
@@ -659,4 +664,9 @@ class TkControlParameters(seamm.TkNode):
             if key not in ("frame", "name"):
                 data[key] = w.get()
 
+        self.reset_table()
+
+    def remove_variable(self, name):
+        """Remove a variable variable."""
+        del self._variables[name]
         self.reset_table()
