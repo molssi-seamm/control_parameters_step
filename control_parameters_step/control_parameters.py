@@ -292,6 +292,7 @@ class ControlParameters(seamm.Node):
         have_overwrite = False
         used_ini_file = False
         for dest, data in variables.items():
+            dest = dest.replace("-", "_")
             table["Variable"].append(dest)
 
             value = options[dest]
