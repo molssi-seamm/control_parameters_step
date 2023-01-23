@@ -13,7 +13,7 @@ already exists, though this can be changed. This allows embedding
 flowcharts within other flowcharts without overriding parameters, but
 ensuring that all parameters are set.
 
-Parameters have a specified type:
+Parameters have a specified type::
 
         str     A text string
         int     An integer
@@ -22,7 +22,7 @@ Parameters have a specified type:
 
 Typically parameters have one value associated with them; however, any
 parameter may have a specified or variable number of values, including
-none. The possibilities are:
+none. The possibilities are::
 
         a single value          This is the default
         N values                Where N is an integer >= 1
@@ -52,7 +52,7 @@ The environment variable by default is SEAMM_<name>, in all capital
 letters, e.g. SEAMM_P or SEAMM_nsteps.
 
 In a control file, the variable name is used as-is followed by the
-value, or = value or : value. Or it can look like a command line argument:
+value, or = value or : value. Or it can look like a command line argument::
 
         P 1.0
         P=1.0
@@ -64,13 +64,13 @@ value, or = value or : value. Or it can look like a command line argument:
         --nsteps 50
 
 Positional arguments cannot be put in a control file. If the value is
-a list, encase it in square brackets:
+a list, encase it in square brackets::
 
         pressures = [1.0, 2.0, 5.0, 10.0]
 
 Internally the parameter definitions are stored in a dictionary with
 the parameter name as key and the value is itself a dictionary labeled
-by the item in the definition, e.g. 'name', 'default', and 'nargs':
+by the item in the definition, e.g. 'name', 'default', and 'nargs'::
 
         "T": {
             "type": "float",
@@ -81,7 +81,6 @@ by the item in the definition, e.g. 'name', 'default', and 'nargs':
             "overwrite": "No",
             "help": "The temperature"
         },
-
 """
 
 import json
@@ -206,6 +205,7 @@ class ControlParameters(seamm.Node):
         P: dict
             An optional dictionary of the current values of the control
             parameters.
+
         Returns
         -------
         str
@@ -292,6 +292,7 @@ class ControlParameters(seamm.Node):
         have_overwrite = False
         used_ini_file = False
         for dest, data in variables.items():
+            dest = dest.replace("-", "_")
             table["Variable"].append(dest)
 
             value = options[dest]

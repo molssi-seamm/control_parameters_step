@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Control parameters for the Control Parameters step in a SEAMM flowchart
+"""Control parameters for the Control Parameters step in a SEAMM flowchart
 """
 
 import logging
@@ -21,16 +20,16 @@ class ControlParametersParameters(seamm.Parameters):
     You need to replace the 'time' example below with one or more
     definitions of the control parameters for your plugin and application.
 
-    Attributes
+    Parameters
     ----------
     parameters : {'kind', 'default', 'default_units', 'enumeration',
-                  'format_string', description', help_text'}
+    'format_string', description', help_text'}
         A dictionary containing the parameters for the current step.
         Each key of the dictionary is a dictionary that contains the
         the following keys: kind, default, default_units, enumeration,
         format_string, description and help text.
 
-    parameters['kind']: custom
+    parameters['kind'] : custom
         Specifies the kind of a variable. While the 'kind' of a variable might
         be a numeric value, it may still have enumerated custom values
         meaningful to the user. For instance, if the parameter is
@@ -45,36 +44,22 @@ class ControlParametersParameters(seamm.Parameters):
     parameters['default_units'] : str
         The default units, used for resetting the value.
 
-    parameters['enumeration']: tuple
+    parameters['enumeration'] : tuple
         A tuple of enumerated values.
 
-    parameters['format_string']: str
+    parameters['format_string'] : str
         A format string for 'pretty' output.
 
-    parameters['description']: str
+    parameters['description'] : str
         A short string used as a prompt in the GUI.
 
-    parameters['help_text']: tuple
+    parameters['help_text'] : tuple
         A longer string to display as help for the user.
 
     See Also
     --------
     ControlParameters, TkControlParameters, ControlParameters
     ControlParametersParameters, Control ParametersStep
-
-    Examples
-    --------
-    parameters = {
-        "time": {
-            "default": 100.0,
-            "kind": "float",
-            "default_units": "ps",
-            "enumeration": tuple(),
-            "format_string": ".1f",
-            "description": "Simulation time:",
-            "help_text": ("The time to simulate in the dynamics run.")
-        },
-    }
     """
 
     parameters = {
