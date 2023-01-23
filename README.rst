@@ -14,11 +14,11 @@ Control Parameters Step
    :target: https://codecov.io/gh/molssi-seamm/control_parameters_step
    :alt: Code Coverage
 
-.. image:: https://img.shields.io/lgtm/grade/python/g/molssi-seamm/control_parameters_step.svg?logo=lgtm&logoWidth=18
-   :target: https://lgtm.com/projects/g/molssi-seamm/control_parameters_step/context:python
+.. image:: https://github.com/molssi-seamm/control_parameters_step/workflows/CodeQL/badge.svg
+   :target: https://github.com/molssi-seamm/control_parameters_step/security/code-scanning
    :alt: Code Quality
 
-.. image:: https://github.com/molssi-seamm/control_parameters_step/workflows/Documentation/badge.svg
+.. image:: https://github.com/molssi-seamm/control_parameters_step/workflows/Release/badge.svg
    :target: https://molssi-seamm.github.io/control_parameters_step/index.html
    :alt: Documentation Status
 
