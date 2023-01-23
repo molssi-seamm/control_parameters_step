@@ -571,7 +571,7 @@ class TkControlParameters(seamm.TkNode):
                 "a single value",
                 "an optional value",
                 "zero or more values",
-                "one or more",
+                "one or more values",
             ),
             state="readonly",
         )
