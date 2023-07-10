@@ -86,6 +86,7 @@ by the item in the definition, e.g. 'name', 'default', and 'nargs'::
 import json
 import logging
 import pprint  # noqa: F401
+import shlex
 import textwrap
 
 from tabulate import tabulate
@@ -422,7 +423,10 @@ class ControlParameters(seamm.Node):
         for dest, data in variables.items():
             data_type = data["type"]
             type_ = types[data_type]
-            default = type_(data["default"])
+            if "more" in data["nargs"]:
+                default = [type_(i) for i in shlex.split(data["default"])]
+            else:
+                default = type_(data["default"])
             if data["optional"] == "Yes":
                 name = "--" + dest
             else:

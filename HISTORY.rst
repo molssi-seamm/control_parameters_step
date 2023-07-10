@@ -2,6 +2,11 @@
 History
 =======
 
+2023.7.10: Bugfix handling parameters with 0+ values
+
+   * The default was not correctly handled for control parameters with 0+ arguments,
+     where they need to be a list.
+     
 2023.1.23: Fixed issue with  parameters with '_'
 ------------------------------------------------
 
