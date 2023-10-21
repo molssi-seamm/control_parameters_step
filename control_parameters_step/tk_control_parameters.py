@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """The graphical part of a Control Parameters step"""
+import json
+import shlex
 
 import seamm
 from seamm_util import ureg, Q_, units_class  # noqa: F401
@@ -130,6 +132,7 @@ class TkControlParameters(seamm.TkNode):
             frame,
             columns=[
                 "",
+                "",
                 "Name",
                 "Type",
                 "NArgs",
@@ -241,6 +244,15 @@ class TkControlParameters(seamm.TkNode):
 
         P = self.node.parameters
         self._variables = P["variables"].value
+
+        # Turn choices into simple strings
+        for data in self._variables.values():
+            # Compatibility for old flowcharts
+            if isinstance(data["choices"], str):
+                data["choices"] = json.loads(data["choices"])
+
+            data["choices"] = shlex.join(data["choices"])
+
         self.reset_dialog()
         self.reset_table()
 
@@ -281,8 +293,11 @@ class TkControlParameters(seamm.TkNode):
         # Shortcut for parameters
         P = self.node.parameters
 
-        # Get the values for all the widgets.
+        # Get the values for all the widgets, fixing up choices
+        for data in self._variables.values():
+            data["choices"] = shlex.split(data["choices"])
         P["variables"].value = self._variables
+
         self._variables = None
 
         for key in P:
@@ -314,7 +329,7 @@ class TkControlParameters(seamm.TkNode):
         self._new["nargs"].set("a single value")
         self._new["overwrite"].set("No")
         self._new["default"].set("")
-        self._new["choices"].set("[]")
+        self._new["choices"].set("")
         self._new["help"].set("")
 
         self._new_variable_dialog.activate(geometry="centerscreenfirst")
