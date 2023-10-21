@@ -432,12 +432,17 @@ class ControlParameters(seamm.Node):
             else:
                 name = dest
             nargs = nargs_values[data["nargs"]]
+
+            # Compatibility for old flowcharts
+            if isinstance(data["choices"], str):
+                data["choices"] = json.loads(data["choices"])
+
             choices = data["choices"]
             if choices == "":
                 choices = None
             else:
                 # choices is a string representation of a list
-                choices = json.loads(choices.replace("'", '"'))
+                # choices = json.loads(choices.replace("'", '"'))
                 if len(choices) == 0:
                     choices = None
 

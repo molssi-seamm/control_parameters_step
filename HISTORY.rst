@@ -2,6 +2,11 @@
 History
 =======
 
+2023.10.21: Improved handling of choices
+   * When editing the choices for a parameter, the entryfield now accepts the choices
+     separated by spaces. If a choice has spaces or other special characters they can be
+     protected with quotes or backslash in the normal fashion for shell arguments.
+
 2023.7.10: Bugfix handling parameters with 0+ values
 
    * The default was not correctly handled for control parameters with 0+ arguments,
