@@ -1,7 +1,10 @@
 =======
 History
 =======
-
+2023.11.6: Bugfix for choices in control parameters
+   * Ensuring compatibility of older flowcharts with improved handling of choices in the
+     control parameters, necessitated by the Web GUI.
+     
 2023.10.21: Improved handling of choices
    * When editing the choices for a parameter, the entryfield now accepts the choices
      separated by spaces. If a choice has spaces or other special characters they can be

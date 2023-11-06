@@ -275,6 +275,9 @@ class TkControlParameters(seamm.TkNode):
         -------
         None
         """
+        # Get the values for all the widgets, fixing up choices
+        for data in self._variables.values():
+            data["choices"] = shlex.split(data["choices"])
 
         if result is None or result == "Cancel":
             self.dialog.deactivate(result)
@@ -293,9 +296,6 @@ class TkControlParameters(seamm.TkNode):
         # Shortcut for parameters
         P = self.node.parameters
 
-        # Get the values for all the widgets, fixing up choices
-        for data in self._variables.values():
-            data["choices"] = shlex.split(data["choices"])
         P["variables"].value = self._variables
 
         self._variables = None
