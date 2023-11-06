@@ -435,7 +435,10 @@ class ControlParameters(seamm.Node):
 
             # Compatibility for old flowcharts
             if isinstance(data["choices"], str):
-                data["choices"] = json.loads(data["choices"])
+                if data["choices"] == "":
+                    data["choices"] == []
+                else:
+                    data["choices"] = json.loads(data["choices"])
 
             choices = data["choices"]
             if choices == "":
