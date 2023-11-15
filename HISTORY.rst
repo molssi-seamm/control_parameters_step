@@ -1,6 +1,10 @@
 =======
 History
 =======
+2023.11.15: Improved handling of boolean options
+   * Properly support using boolean options on the commandline as just a flag to
+     indicate True.
+     
 2023.11.6: Bugfix for choices in control parameters
    * Ensuring compatibility of older flowcharts with improved handling of choices in the
      control parameters, necessitated by the Web GUI.
