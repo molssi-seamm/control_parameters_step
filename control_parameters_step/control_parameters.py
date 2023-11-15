@@ -449,14 +449,22 @@ class ControlParameters(seamm.Node):
                 if len(choices) == 0:
                     choices = None
 
-            parser.add_argument(
-                "SEAMM",
-                name,
-                type=type_,
-                nargs=nargs,
-                default=default,
-                choices=choices,
-                help=data["help"],
-            )
+            if data_type == "bool":
+                parser.add_argument(
+                    "SEAMM",
+                    name,
+                    action="store_true",
+                    help=data["help"],
+                )
+            else:
+                parser.add_argument(
+                    "SEAMM",
+                    name,
+                    type=type_,
+                    nargs=nargs,
+                    default=default,
+                    choices=choices,
+                    help=data["help"],
+                )
 
         return result
