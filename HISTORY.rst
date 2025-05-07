@@ -1,6 +1,9 @@
 =======
 History
 =======
+2025.5.7: Bugfix: Error printing lists of values
+   * Fixed a problem printing variables that were a list of floats.
+     
 2023.11.15: Improved handling of boolean options
    * Properly support using boolean options on the commandline as just a flag to
      indicate True.

@@ -346,10 +346,11 @@ class ControlParameters(seamm.Node):
                     self.set_variable(dest, value)
 
             if isinstance(value, list):
+                tmp = [str(v) for v in value]
                 if len(value) > 5:
-                    table["Value"].append("\n".join(value[0:5]) + "\n...")
+                    table["Value"].append("\n".join(tmp[0:5]) + "\n...")
                 else:
-                    table["Value"].append("\n".join(value))
+                    table["Value"].append("\n".join(tmp))
             else:
                 table["Value"].append(value)
 
