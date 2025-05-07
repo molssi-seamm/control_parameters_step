@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Control parameters for the Control Parameters step in a SEAMM flowchart
-"""
+"""Control parameters for the Control Parameters step in a SEAMM flowchart"""
 
 import logging
 import seamm
