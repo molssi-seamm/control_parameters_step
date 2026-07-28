@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """The graphical part of a Control Parameters step"""
+
 import json
 import shlex
 
