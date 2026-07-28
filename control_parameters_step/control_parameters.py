@@ -310,13 +310,13 @@ class ControlParameters(seamm.Node):
                             paths = []
                             tmp = []
                             for val in value:
-                                path = self.file_path(val)
+                                path = self.file_path(val, read_only=True)
                                 tmp.append(str(path))
                                 paths.append(path)
                             value = tmp
                             self.set_variable(dest, paths)
                         else:
-                            path = self.file_path(value)
+                            path = self.file_path(value, read_only=True)
                             value = str(path)
                             self.set_variable(dest, path)
                     else:
@@ -333,13 +333,13 @@ class ControlParameters(seamm.Node):
                         paths = []
                         tmp = []
                         for val in value:
-                            path = self.file_path(val)
+                            path = self.file_path(val, read_only=True)
                             tmp.append(str(path))
                             paths.append(path)
                         value = tmp
                         self.set_variable(dest, paths)
                     else:
-                        path = self.file_path(value)
+                        path = self.file_path(value, read_only=True)
                         value = str(path)
                         self.set_variable(dest, path)
                 else:

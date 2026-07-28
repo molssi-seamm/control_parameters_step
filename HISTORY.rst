@@ -1,6 +1,12 @@
 =======
 History
 =======
+2026.7.28: File-typed control parameters can reference another job
+   * A control parameter of type "file" can now reference another job's
+     file, via ``job://<job number>/<name>`` (SEAMM's ``Node.file_path``
+     gained read-only cross-job references) -- useful for pulling in a
+     file produced by an earlier, separate job.
+
 2025.5.7: Bugfix: Error printing lists of values
    * Fixed a problem printing variables that were a list of floats.
      
