@@ -7,6 +7,57 @@ import pprint  # noqa: F401
 
 logger = logging.getLogger(__name__)
 
+#: The items of a variable's definition, with the values the dialog starts with. A
+#: definition made elsewhere -- by seamm-flowchart or the MCP server, or by hand --
+#: may give only some; the rest are filled in when the parameters are read, since
+#: the step, the job dialog and job submission all read every item.
+VARIABLE_DEFAULTS = {
+    "type": "str",
+    "nargs": "a single value",
+    "optional": "Yes",
+    "default": "",
+    "choices": [],
+    "overwrite": "No",
+    "help": "",
+}
+
+#: The allowed values of the items with a fixed set of them
+VARIABLE_CHOICES = {
+    "type": ("file", "str", "int", "float", "choice", "bool", "list"),
+    "nargs": (
+        "a single value",
+        "an optional value",
+        "zero or more values",
+        "one or more values",
+    ),
+    "optional": ("Yes", "No"),
+    "overwrite": ("Yes", "No"),
+}
+
+
+def complete_variables(variables):
+    """Fill in the items a variable's definition does not give.
+
+    Parameters
+    ----------
+    variables : dict
+        The definitions, by variable name, changed in place.
+
+    Returns
+    -------
+    dict
+        The same definitions.
+    """
+    if not isinstance(variables, dict):
+        return variables
+    for data in variables.values():
+        if not isinstance(data, dict):
+            continue
+        for item, value in VARIABLE_DEFAULTS.items():
+            if item not in data:
+                data[item] = list(value) if isinstance(value, list) else value
+    return variables
+
 
 class ControlParametersParameters(seamm.Parameters):
     """
@@ -96,3 +147,31 @@ class ControlParametersParameters(seamm.Parameters):
         super().__init__(
             defaults={**ControlParametersParameters.parameters, **defaults}, data=data
         )
+
+    def update(self, data):
+        """Update the values, completing each variable's definition."""
+        super().update(data)
+        if "variables" in self:
+            complete_variables(self["variables"].value)
+
+    def problems(self, values=None):
+        """The checks of the base class, and that each variable's definition is
+        complete and uses the allowed values."""
+        result = super().problems(values)
+        if values is None:
+            values = self.current_values()
+        variables = values.get("variables")
+        if not isinstance(variables, dict):
+            return result
+        for name, data in variables.items():
+            if not isinstance(data, dict):
+                result.append(f"The variable '{name}' has no definition.")
+                continue
+            for item, allowed in VARIABLE_CHOICES.items():
+                value = data.get(item, VARIABLE_DEFAULTS[item])
+                if value not in allowed:
+                    result.append(
+                        f"The variable '{name}' has '{item}' {value!r}; it must be "
+                        "one of " + ", ".join(repr(a) for a in allowed) + "."
+                    )
+        return result
