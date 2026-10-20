@@ -1,6 +1,15 @@
 =======
 History
 =======
+2026.10.20 -- Bugfix: a variable defined with only some of its items
+    * A flowchart made with seamm-flowchart or the MCP server could define a variable
+      with only some items, e.g. its type, default and help. Reading the flowchart
+      kept it as given, so submitting the job stopped with the error 'nargs'. The
+      missing items now take the values the dialog starts with ('a single value',
+      optional, not overwritten, no choices), and an item with a value that is not
+      allowed, such as an unknown type, is reported when the flowchart is checked.
+    * Internal: the tests run under uv in CI (test_env.yaml removed).
+
 2026.7.28: File-typed control parameters can reference another job
    * A control parameter of type "file" can now reference another job's
      file, via ``job://<job number>/<name>`` (SEAMM's ``Node.file_path``
