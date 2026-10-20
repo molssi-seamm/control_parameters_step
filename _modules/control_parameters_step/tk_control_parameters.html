@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>control_parameters_step.tk_control_parameters &#8212; Control Parameters Step 2026.7.28 documentation</title>
+    <title>control_parameters_step.tk_control_parameters &#8212; Control Parameters Step 2026.10.20 documentation</title>
   
   
   
@@ -26,8 +25,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -35,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c224919a" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -48,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
 <!-- End Google Tag Manager -->
 
-    <script src="../../_static/documentation_options.js?v=197c1917"></script>
+    <script src="../../_static/documentation_options.js?v=980f7468"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -60,8 +59,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2026.7.28" />
+  <meta name="docsearch:version" content="2026.10.20" />
   
     
     <script src="../../_static/searchtools.js"></script>
@@ -109,7 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -227,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
  <span class="search-button__default-text">Search</span>
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -238,15 +238,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="navbar-item">
 
 <div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
     <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
     <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
     <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
   </ul>
 </div></div>
       
@@ -283,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <div class="navbar-persistent--mobile">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
  <span class="search-button__default-text">Search</span>
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -388,15 +388,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="navbar-item">
 
 <div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
     <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
     <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
     <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
   </ul>
 </div></div>
         
@@ -488,7 +488,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <h1>Source code for control_parameters_step.tk_control_parameters</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
-<span class="sd">&quot;&quot;&quot;The graphical part of a Control Parameters step&quot;&quot;&quot;</span>
+<span class="sd">"""The graphical part of a Control Parameters step"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">shlex</span>
@@ -506,7 +506,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">TkControlParameters</span><span class="p">(</span><span class="n">seamm</span><span class="o">.</span><span class="n">TkNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The graphical part of a Control Parameters step in a flowchart.</span>
 
 <span class="sd">    Attributes</span>
@@ -539,12 +539,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">    --------</span>
 <span class="sd">    ControlParameters, TkControlParameters,</span>
 <span class="sd">    ControlParametersParameters,</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">tk_flowchart</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">canvas</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">50</span>
     <span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Initialize a graphical node.</span>
 
 <span class="sd">        Parameters</span>
@@ -569,7 +569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># temporary copy when editing</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span> <span class="o">=</span> <span class="kc">None</span>
@@ -584,7 +584,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.create_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.create_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Create the dialog. A set of widgets will be chosen by default</span>
 <span class="sd">        based on what is specified in the Control Parameters_parameters</span>
 <span class="sd">        module.</span>
@@ -600,8 +600,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        See Also</span>
 <span class="sd">        --------</span>
 <span class="sd">        TkControlParameters.reset_dialog</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">create_dialog</span><span class="p">(</span><span class="s2">&quot;Edit Parameters&quot;</span><span class="p">)</span>
+<span class="sd">        """</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">create_dialog</span><span class="p">(</span><span class="s2">"Edit Parameters"</span><span class="p">)</span>
 
         <span class="c1"># make it large!</span>
         <span class="n">screen_w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">winfo_screenwidth</span><span class="p">()</span>
@@ -611,9 +611,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.05</span> <span class="o">*</span> <span class="n">screen_w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
         <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">screen_h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">x</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2">x</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 
-        <span class="c1"># The information about widgets is held in self[&#39;xxxx&#39;], i.e. this</span>
+        <span class="c1"># The information about widgets is held in self['xxxx'], i.e. this</span>
         <span class="c1"># class is in part a dictionary of widgets. This makes accessing</span>
         <span class="c1"># the widgets easier and allows loops, etc.</span>
 
@@ -621,18 +621,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="n">P</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">parameters</span>
 
         <span class="c1"># Then create the widgets</span>
-        <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">ScrolledColumns</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s2">"variables"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">ScrolledColumns</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
             <span class="n">columns</span><span class="o">=</span><span class="p">[</span>
-                <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Type&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;NArgs&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Optional&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Overwrite?&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Default&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Help&quot;</span><span class="p">,</span>
+                <span class="s2">""</span><span class="p">,</span>
+                <span class="s2">""</span><span class="p">,</span>
+                <span class="s2">"Name"</span><span class="p">,</span>
+                <span class="s2">"Type"</span><span class="p">,</span>
+                <span class="s2">"NArgs"</span><span class="p">,</span>
+                <span class="s2">"Optional"</span><span class="p">,</span>
+                <span class="s2">"Overwrite?"</span><span class="p">,</span>
+                <span class="s2">"Default"</span><span class="p">,</span>
+                <span class="s2">"Help"</span><span class="p">,</span>
             <span class="p">],</span>
         <span class="p">)</span>
         <span class="c1"># any remaining widgets</span>
@@ -644,7 +644,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.reset_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.reset_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Layout the widgets in the dialog.</span>
+<span class="w">        </span><span class="sd">"""Layout the widgets in the dialog.</span>
 
 <span class="sd">        The widgets are chosen by default from the information in</span>
 <span class="sd">        Control Parameters_parameter.</span>
@@ -665,10 +665,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        See Also</span>
 <span class="sd">        --------</span>
 <span class="sd">        TkControlParameters.create_dialog</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="c1"># Remove any widgets previously packed</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;frame&quot;</span><span class="p">]</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s2">"frame"</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">slave</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">grid_slaves</span><span class="p">():</span>
             <span class="n">slave</span><span class="o">.</span><span class="n">grid_forget</span><span class="p">()</span>
 
@@ -676,12 +676,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="n">P</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">parameters</span>
 
         <span class="c1"># keep track of the row in a variable, so that the layout is flexible</span>
-        <span class="c1"># if e.g. rows are skipped to control such as &#39;method&#39; here</span>
+        <span class="c1"># if e.g. rows are skipped to control such as 'method' here</span>
         <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># Variables table first</span>
-        <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;variables&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="s2">"variables"</span>
         <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">NSEW</span><span class="p">)</span>
         <span class="n">frame</span><span class="o">.</span><span class="n">columnconfigure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">frame</span><span class="o">.</span><span class="n">rowconfigure</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -701,7 +701,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.right_click">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.right_click">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">right_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Handles the right click event on the node.</span>
 
 <span class="sd">        Parameters</span>
@@ -715,10 +715,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        See Also</span>
 <span class="sd">        --------</span>
 <span class="sd">        TkControlParameters.edit</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">right_click</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">popup_menu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Edit..&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">popup_menu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Edit.."</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edit</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">popup_menu</span><span class="o">.</span><span class="n">tk_popup</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">x_root</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">y_root</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
 
@@ -726,7 +726,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.edit">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.edit">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">edit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Present a dialog for editing the Control Parameters input</span>
+<span class="w">        </span><span class="sd">"""Present a dialog for editing the Control Parameters input</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -739,35 +739,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        See Also</span>
 <span class="sd">        --------</span>
 <span class="sd">        TkControlParameters.right_click</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">create_dialog</span><span class="p">()</span>
 
         <span class="n">P</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">parameters</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="s2">"variables"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
 
         <span class="c1"># Turn choices into simple strings</span>
         <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
             <span class="c1"># Compatibility for old flowcharts</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
-                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">])</span>
 
-            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">])</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">])</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_dialog</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_table</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="s2">&quot;centerscreenfirst&quot;</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="s2">"centerscreenfirst"</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TkControlParameters.handle_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.handle_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">handle_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Handle the closing of the edit dialog</span>
+<span class="w">        </span><span class="sd">"""Handle the closing of the edit dialog</span>
 
 <span class="sd">        What to do depends on the button used to close the dialog. If</span>
-<span class="sd">        the user closes it by clicking the &#39;x&#39; of the dialog window,</span>
+<span class="sd">        the user closes it by clicking the 'x' of the dialog window,</span>
 <span class="sd">        None is returned, which we take as equivalent to cancel.</span>
 
 <span class="sd">        Parameters</span>
@@ -779,41 +779,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="c1"># Get the values for all the widgets, fixing up choices</span>
         <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">])</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">])</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">"Cancel"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="k">return</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">&quot;Help&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">"Help"</span><span class="p">:</span>
             <span class="c1"># display help!!!</span>
             <span class="k">return</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s2">&quot;OK&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s2">"OK"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Don&#39;t recognize dialog result &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"Don't recognize dialog result '</span><span class="si">{}</span><span class="s2">'"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
         <span class="c1"># Shortcut for parameters</span>
         <span class="n">P</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">parameters</span>
 
-        <span class="n">P</span><span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span>
+        <span class="n">P</span><span class="p">[</span><span class="s2">"variables"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">P</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">&quot;variables&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">"variables"</span><span class="p">:</span>
                 <span class="n">P</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">set_from_widget</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="TkControlParameters.handle_help">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.handle_help">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">handle_help</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Shows the help to the user when click on help button.</span>
+<span class="w">        </span><span class="sd">"""Shows the help to the user when click on help button.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -822,34 +822,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Help not implemented yet for Control Parameters!&quot;</span><span class="p">)</span></div>
+<span class="sd">        """</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Help not implemented yet for Control Parameters!"</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TkControlParameters.add_variable">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.add_variable">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a new variable to the table.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Add a new variable to the table."""</span>
         <span class="c1"># Post dialog to fill out the new variable</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">create_new_variable_dialog</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;optional&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;nargs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;a single value&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;overwrite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"float"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"optional"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"Yes"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"nargs"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"a single value"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"overwrite"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"No"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"help"</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="s2">&quot;centerscreenfirst&quot;</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="s2">"centerscreenfirst"</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TkControlParameters.create_new_variable_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.create_new_variable_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create_new_variable_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Create a dialog for adding new variables.</span>
 
 <span class="sd">        Parameters</span>
@@ -859,60 +859,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span>
 
         <span class="n">dialog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span> <span class="o">=</span> <span class="n">Pmw</span><span class="o">.</span><span class="n">Dialog</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">interior</span><span class="p">(),</span>
-            <span class="n">buttons</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">),</span>
-            <span class="n">defaultbutton</span><span class="o">=</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
-            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Add Variable&quot;</span><span class="p">,</span>
+            <span class="n">buttons</span><span class="o">=</span><span class="p">(</span><span class="s2">"OK"</span><span class="p">,</span> <span class="s2">"Cancel"</span><span class="p">),</span>
+            <span class="n">defaultbutton</span><span class="o">=</span><span class="s2">"OK"</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">"Add Variable"</span><span class="p">,</span>
             <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_new_variable_dialog</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span><span class="o">.</span><span class="n">withdraw</span><span class="p">()</span>
 
         <span class="c1"># Create a frame to hold everything in the dialog</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;frame&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">dialog</span><span class="o">.</span><span class="n">interior</span><span class="p">())</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"frame"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">dialog</span><span class="o">.</span><span class="n">interior</span><span class="p">())</span>
         <span class="n">frame</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">YES</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">BOTH</span><span class="p">)</span>
 
         <span class="c1"># Then create the widgets</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;optional&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
-            <span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Optional?:&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Name"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"optional"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+            <span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Optional?:"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">"Yes"</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
-            <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Type:&quot;</span><span class="p">,</span>
+            <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Type:"</span><span class="p">,</span>
             <span class="n">values</span><span class="o">=</span><span class="p">(</span>
-                <span class="s2">&quot;str&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;int&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;float&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;bool&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+                <span class="s2">"str"</span><span class="p">,</span>
+                <span class="s2">"int"</span><span class="p">,</span>
+                <span class="s2">"float"</span><span class="p">,</span>
+                <span class="s2">"bool"</span><span class="p">,</span>
+                <span class="s2">"file"</span><span class="p">,</span>
             <span class="p">),</span>
-            <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+            <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;nargs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"nargs"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
-            <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Number of values:&quot;</span><span class="p">,</span>
+            <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Number of values:"</span><span class="p">,</span>
             <span class="n">values</span><span class="o">=</span><span class="p">(</span>
-                <span class="s2">&quot;a single value&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;an optional value&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;zero or more values&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;one or more values&quot;</span><span class="p">,</span>
+                <span class="s2">"a single value"</span><span class="p">,</span>
+                <span class="s2">"an optional value"</span><span class="p">,</span>
+                <span class="s2">"zero or more values"</span><span class="p">,</span>
+                <span class="s2">"one or more values"</span><span class="p">,</span>
             <span class="p">),</span>
-            <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+            <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;overwrite&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"overwrite"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
-            <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Overwrite if exists:&quot;</span><span class="p">,</span>
-            <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span>
-            <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+            <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Overwrite if exists:"</span><span class="p">,</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">"Yes"</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span>
+            <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Default:&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Choices:&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Help:&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Default:"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Choices:"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"help"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Help:"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 
         <span class="c1"># and lay them out</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_new_variable_dialog</span><span class="p">()</span></div>
@@ -921,32 +921,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.reset_new_variable_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.reset_new_variable_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_new_variable_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Lay the dialog out based on the contents.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Lay the dialog out based on the contents."""</span>
         <span class="c1"># Remove any widgets previously packed</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;frame&quot;</span><span class="p">]</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"frame"</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">slave</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">grid_slaves</span><span class="p">():</span>
             <span class="n">slave</span><span class="o">.</span><span class="n">grid_forget</span><span class="p">()</span>
 
         <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;nargs&quot;</span><span class="p">,</span> <span class="s2">&quot;optional&quot;</span><span class="p">,</span> <span class="s2">&quot;overwrite&quot;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">,</span> <span class="s2">"nargs"</span><span class="p">,</span> <span class="s2">"optional"</span><span class="p">,</span> <span class="s2">"overwrite"</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
             <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
 
-        <span class="n">type_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">type_</span> <span class="o">!=</span> <span class="s2">&quot;bool&quot;</span><span class="p">:</span>
-            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">type_</span> <span class="o">!=</span> <span class="s2">"bool"</span><span class="p">:</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]</span>
             <span class="n">w</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
             <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span>
             <span class="n">w</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
             <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
-        <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"help"</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
+        <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"help"</span><span class="p">])</span>
         <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="n">sw</span><span class="o">.</span><span class="n">align_labels</span><span class="p">(</span><span class="n">widgets</span><span class="p">)</span></div>
@@ -955,10 +955,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.handle_new_variable_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.handle_new_variable_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">handle_new_variable_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Handle the closing of the new variable dialog</span>
+<span class="w">        </span><span class="sd">"""Handle the closing of the new variable dialog</span>
 
 <span class="sd">        What to do depends on the button used to close the dialog. If</span>
-<span class="sd">        the user closes it by clicking the &#39;x&#39; of the dialog window,</span>
+<span class="sd">        the user closes it by clicking the 'x' of the dialog window,</span>
 <span class="sd">        None is returned, which we take as equivalent to cancel.</span>
 
 <span class="sd">        Parameters</span>
@@ -970,25 +970,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">"Cancel"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
             <span class="k">return</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s2">&quot;OK&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s2">"OK"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Don&#39;t recognize new variable dialog result &#39;</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Don't recognize new variable dialog result '</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_variable_dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
-        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duplicate variable name: &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Duplicate variable name: '</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
 
         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"frame"</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">):</span>
                 <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_table</span><span class="p">()</span></div>
@@ -997,8 +997,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.reset_table">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.reset_table">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update the table of variables to the current data.&quot;&quot;&quot;</span>
-        <span class="n">table</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="sd">"""Update the table of variables to the current data."""</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s2">"variables"</span><span class="p">]</span>
 
         <span class="n">frame</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">interior</span><span class="p">()</span>
         <span class="n">table</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -1007,31 +1007,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
                 <span class="n">frame</span><span class="p">,</span>
-                <span class="n">text</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+                <span class="n">text</span><span class="o">=</span><span class="s2">"-"</span><span class="p">,</span>
                 <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                 <span class="n">command</span><span class="o">=</span><span class="k">lambda</span> <span class="n">nm</span><span class="o">=</span><span class="n">name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_variable</span><span class="p">(</span><span class="n">nm</span><span class="p">),</span>
                 <span class="n">takefocus</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="p">)</span>
             <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
                 <span class="n">frame</span><span class="p">,</span>
-                <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Edit&quot;</span><span class="p">,</span>
+                <span class="n">text</span><span class="o">=</span><span class="s2">"Edit"</span><span class="p">,</span>
                 <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                 <span class="n">command</span><span class="o">=</span><span class="k">lambda</span> <span class="n">nm</span><span class="o">=</span><span class="n">name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">edit_variable</span><span class="p">(</span><span class="n">nm</span><span class="p">),</span>
                 <span class="n">takefocus</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="p">)</span>
             <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;nargs&quot;</span><span class="p">]</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;optional&quot;</span><span class="p">]</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;overwrite&quot;</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;bool&quot;</span><span class="p">:</span>
-                <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"nargs"</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"optional"</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"overwrite"</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">"bool"</span><span class="p">:</span>
+                <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"help"</span><span class="p">]</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="c1"># a button to add new variables...</span>
         <span class="n">table</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
-            <span class="n">frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_variable</span><span class="p">,</span> <span class="n">takefocus</span><span class="o">=</span><span class="kc">True</span>
+            <span class="n">frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">"+"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_variable</span><span class="p">,</span> <span class="n">takefocus</span><span class="o">=</span><span class="kc">True</span>
         <span class="p">)</span>
 
         <span class="n">table</span><span class="o">.</span><span class="n">update_idletasks</span><span class="p">()</span></div>
@@ -1040,7 +1040,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.edit_variable">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.edit_variable">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">edit_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Edit the values associated with a variable.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Edit the values associated with a variable."""</span>
         <span class="c1"># Post dialog to fill out the new variable</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">create_edit_variable_dialog</span><span class="p">()</span>
@@ -1053,18 +1053,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"name"</span><span class="p">:</span>
                 <span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">&quot;frame&quot;</span><span class="p">:</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">"frame"</span><span class="p">:</span>
                 <span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="s2">&quot;centerscreenfirst&quot;</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="s2">"centerscreenfirst"</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TkControlParameters.create_edit_variable_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.create_edit_variable_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create_edit_variable_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Create a dialog for adding edit variables.</span>
 
 <span class="sd">        Parameters</span>
@@ -1074,63 +1074,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span>
 
         <span class="n">dialog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span> <span class="o">=</span> <span class="n">Pmw</span><span class="o">.</span><span class="n">Dialog</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">interior</span><span class="p">(),</span>
-            <span class="n">buttons</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">),</span>
-            <span class="n">defaultbutton</span><span class="o">=</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
-            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Edit Variable&quot;</span><span class="p">,</span>
+            <span class="n">buttons</span><span class="o">=</span><span class="p">(</span><span class="s2">"OK"</span><span class="p">,</span> <span class="s2">"Cancel"</span><span class="p">),</span>
+            <span class="n">defaultbutton</span><span class="o">=</span><span class="s2">"OK"</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">"Edit Variable"</span><span class="p">,</span>
             <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_edit_variable_dialog</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span><span class="o">.</span><span class="n">withdraw</span><span class="p">()</span>
 
         <span class="c1"># Create a frame to hold everything in the dialog</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;frame&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">dialog</span><span class="o">.</span><span class="n">interior</span><span class="p">())</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"frame"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">dialog</span><span class="o">.</span><span class="n">interior</span><span class="p">())</span>
         <span class="n">frame</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">YES</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">BOTH</span><span class="p">)</span>
 
         <span class="c1"># Then create the widgets</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;optional&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
-            <span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Type:&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Name"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"optional"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+            <span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Type:"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">"Yes"</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
-            <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Type:&quot;</span><span class="p">,</span>
+            <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Type:"</span><span class="p">,</span>
             <span class="n">values</span><span class="o">=</span><span class="p">(</span>
-                <span class="s2">&quot;str&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;int&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;float&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;bool&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+                <span class="s2">"str"</span><span class="p">,</span>
+                <span class="s2">"int"</span><span class="p">,</span>
+                <span class="s2">"float"</span><span class="p">,</span>
+                <span class="s2">"bool"</span><span class="p">,</span>
+                <span class="s2">"file"</span><span class="p">,</span>
             <span class="p">),</span>
-            <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+            <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;nargs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"nargs"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
-            <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Number of values:&quot;</span><span class="p">,</span>
+            <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Number of values:"</span><span class="p">,</span>
             <span class="n">values</span><span class="o">=</span><span class="p">(</span>
-                <span class="s2">&quot;a single value&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;an optional value&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;zero or more values&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;one or more values&quot;</span><span class="p">,</span>
+                <span class="s2">"a single value"</span><span class="p">,</span>
+                <span class="s2">"an optional value"</span><span class="p">,</span>
+                <span class="s2">"zero or more values"</span><span class="p">,</span>
+                <span class="s2">"one or more values"</span><span class="p">,</span>
             <span class="p">),</span>
-            <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+            <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;overwrite&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"overwrite"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
             <span class="n">frame</span><span class="p">,</span>
-            <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Overwrite if exists:&quot;</span><span class="p">,</span>
-            <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span>
-            <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+            <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Overwrite if exists:"</span><span class="p">,</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">"Yes"</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span>
+            <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Default:&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Choices:&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;optional&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
-            <span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Optional?:&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Default:"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Choices:"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"optional"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledCombobox</span><span class="p">(</span>
+            <span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Optional?:"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">(</span><span class="s2">"Yes"</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="s2">"readonly"</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">&quot;Help:&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"help"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">LabeledEntry</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">labeltext</span><span class="o">=</span><span class="s2">"Help:"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 
         <span class="c1"># and lay them out</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_edit_variable_dialog</span><span class="p">()</span></div>
@@ -1139,32 +1139,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.reset_edit_variable_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.reset_edit_variable_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_edit_variable_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Lay the dialog out based on the contents.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Lay the dialog out based on the contents."""</span>
         <span class="c1"># Remove any widgets previously packed</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;frame&quot;</span><span class="p">]</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"frame"</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">slave</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">grid_slaves</span><span class="p">():</span>
             <span class="n">slave</span><span class="o">.</span><span class="n">grid_forget</span><span class="p">()</span>
 
         <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;nargs&quot;</span><span class="p">,</span> <span class="s2">&quot;optional&quot;</span><span class="p">,</span> <span class="s2">&quot;overwrite&quot;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">,</span> <span class="s2">"nargs"</span><span class="p">,</span> <span class="s2">"optional"</span><span class="p">,</span> <span class="s2">"overwrite"</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
             <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
 
-        <span class="n">type_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">type_</span> <span class="o">!=</span> <span class="s2">&quot;bool&quot;</span><span class="p">:</span>
-            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span>
+        <span class="n">type_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">type_</span> <span class="o">!=</span> <span class="s2">"bool"</span><span class="p">:</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]</span>
             <span class="n">w</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
             <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span>
             <span class="n">w</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
             <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
             <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
-        <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;help&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"help"</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">EW</span><span class="p">)</span>
+        <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"help"</span><span class="p">])</span>
         <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="n">sw</span><span class="o">.</span><span class="n">align_labels</span><span class="p">(</span><span class="n">widgets</span><span class="p">)</span></div>
@@ -1173,10 +1173,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.handle_edit_variable_dialog">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.handle_edit_variable_dialog">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">handle_edit_variable_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Handle the closing of the edit variable dialog</span>
+<span class="w">        </span><span class="sd">"""Handle the closing of the edit variable dialog</span>
 
 <span class="sd">        What to do depends on the button used to close the dialog. If</span>
-<span class="sd">        the user closes it by clicking the &#39;x&#39; of the dialog window,</span>
+<span class="sd">        the user closes it by clicking the 'x' of the dialog window,</span>
 <span class="sd">        None is returned, which we take as equivalent to cancel.</span>
 
 <span class="sd">        Parameters</span>
@@ -1188,21 +1188,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">"Cancel"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
             <span class="k">return</span>
 
-        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s2">&quot;OK&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s2">"OK"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Don&#39;t recognize edit variable dialog result &#39;</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                <span class="sa">f</span><span class="s2">"Don't recognize edit variable dialog result '</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">'"</span>
             <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_edit_variable_dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
-        <span class="n">new_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">new_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">"-"</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">new_name</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
@@ -1211,7 +1211,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edit</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"frame"</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">):</span>
                 <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_table</span><span class="p">()</span></div>
@@ -1220,7 +1220,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="viewcode-block" id="TkControlParameters.remove_variable">
 <a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.tk_control_parameters.TkControlParameters.remove_variable">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">remove_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove a variable variable.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Remove a variable variable."""</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_table</span><span class="p">()</span></div>
 </div>
@@ -1254,8 +1254,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1267,7 +1267,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>
