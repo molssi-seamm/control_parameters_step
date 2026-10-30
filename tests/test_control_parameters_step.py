@@ -76,3 +76,26 @@ def test_a_flowchart_with_partial_definitions_reads_complete():
     data = step.parameters["variables"].value["smiles"]
     assert data["nargs"] == "a single value"
     assert data["optional"] == "Yes" and data["overwrite"] == "No"
+
+
+# ---- defaults of one or more values keep their backslashes ------------------------
+
+
+def test_default_list_keeps_backslashes():
+    """A default list of SMILES kept its Z double bonds only when quoted: shlex.split
+    dropped the backslash of C/C=C\\C (Paul; thermo, ChemAI 5523, 2026-10-30)."""
+    from control_parameters_step.control_parameters import default_value
+
+    data = {"type": "str", "nargs": "one or more values"}
+    data["default"] = r"C=C(C)C C/C=C/C C/C=C\C 'O/C=C\O' C#N"
+    assert default_value(data) == [
+        "C=C(C)C",
+        "C/C=C/C",
+        r"C/C=C\C",
+        r"O/C=C\O",
+        "C#N",
+    ]
+    data = {"type": "str", "nargs": "a single value", "default": r"C/C=C\C"}
+    assert default_value(data) == r"C/C=C\C"
+    data = {"type": "int", "nargs": "one or more values", "default": "1 2 3"}
+    assert default_value(data) == [1, 2, 3]

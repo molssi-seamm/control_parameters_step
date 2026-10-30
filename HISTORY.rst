@@ -1,6 +1,15 @@
 =======
 History
 =======
+2026.10.30 -- Bugfix: lists of values lost their backslashes (Z double bonds in SMILES)
+    * The default of a variable with one or more values, and the choices typed in the
+      editor, were split with ``shlex.split``, which treats a backslash as an escape
+      and drops it. A default list of SMILES such as ``C/C=C/C C/C=C\C`` gave
+      ``C/C=CC`` for the Z isomer, so it was built as E or with the stereo unspecified,
+      unless each value was quoted. They are now split with
+      ``seamm_util.split_values``, which keeps backslashes; quotes work as before.
+      Requires seamm-util 2026.10.30.
+
 2026.10.20 -- Bugfix: a variable defined with only some of its items
     * A flowchart made with seamm-flowchart or the MCP server could define a variable
       with only some items, e.g. its type, default and help. Reading the flowchart

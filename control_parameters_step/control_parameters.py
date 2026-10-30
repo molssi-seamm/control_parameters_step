@@ -86,7 +86,6 @@ by the item in the definition, e.g. 'name', 'default', and 'nargs'::
 import json
 import logging
 import pprint  # noqa: F401
-import shlex
 import textwrap
 
 from tabulate import tabulate
@@ -127,6 +126,20 @@ nargs_values = {
     "zero or more values": "*",
     "one or more values": "+",
 }
+
+
+def default_value(data):
+    """The default of a variable, converted to its type: a list for one or more
+    values.
+
+    The values are split with ``seamm_util.split_values``, which keeps backslashes,
+    such as those of Z double bonds in SMILES (``C/C=C\\C``); ``shlex.split`` dropped
+    them.
+    """
+    type_ = types[data["type"]]
+    if "more" in data["nargs"]:
+        return [type_(i) for i in seamm_util.split_values(data["default"])]
+    return type_(data["default"])
 
 
 class ControlParameters(seamm.Node):
@@ -424,10 +437,7 @@ class ControlParameters(seamm.Node):
         for dest, data in variables.items():
             data_type = data["type"]
             type_ = types[data_type]
-            if "more" in data["nargs"]:
-                default = [type_(i) for i in shlex.split(data["default"])]
-            else:
-                default = type_(data["default"])
+            default = default_value(data)
             if data["optional"] == "Yes":
                 name = "--" + dest
             else:
