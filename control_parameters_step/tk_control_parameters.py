@@ -5,6 +5,8 @@
 import json
 import shlex
 
+import seamm_util
+
 import seamm
 from seamm_util import ureg, Q_, units_class  # noqa: F401
 import seamm_widgets as sw
@@ -278,7 +280,7 @@ class TkControlParameters(seamm.TkNode):
         """
         # Get the values for all the widgets, fixing up choices
         for data in self._variables.values():
-            data["choices"] = shlex.split(data["choices"])
+            data["choices"] = seamm_util.split_values(data["choices"])
 
         if result is None or result == "Cancel":
             self.dialog.deactivate(result)
