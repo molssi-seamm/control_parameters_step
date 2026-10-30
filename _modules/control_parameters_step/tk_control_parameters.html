@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>control_parameters_step.tk_control_parameters &#8212; Control Parameters Step 2026.10.20 documentation</title>
+    <title>control_parameters_step.tk_control_parameters &#8212; Control Parameters Step 2026.10.30 documentation</title>
   
   
   
@@ -47,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
 <!-- End Google Tag Manager -->
 
-    <script src="../../_static/documentation_options.js?v=980f7468"></script>
+    <script src="../../_static/documentation_options.js?v=fcc0a42c"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -61,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2026.10.20" />
+  <meta name="docsearch:version" content="2026.10.30" />
   
     
     <script src="../../_static/searchtools.js"></script>
@@ -493,6 +493,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">shlex</span>
 
+<span class="kn">import</span><span class="w"> </span><span class="nn">seamm_util</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">seamm</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">seamm_util</span><span class="w"> </span><span class="kn">import</span> <span class="n">ureg</span><span class="p">,</span> <span class="n">Q_</span><span class="p">,</span> <span class="n">units_class</span>  <span class="c1"># noqa: F401</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seamm_widgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sw</span>
@@ -782,7 +784,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="sd">        """</span>
         <span class="c1"># Get the values for all the widgets, fixing up choices</span>
         <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-            <span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">])</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">]</span> <span class="o">=</span> <span class="n">seamm_util</span><span class="o">.</span><span class="n">split_values</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"choices"</span><span class="p">])</span>
 
         <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">"Cancel"</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dialog</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>

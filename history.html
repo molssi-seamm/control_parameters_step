@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>History &#8212; Control Parameters Step 2026.10.20 documentation</title>
+    <title>History &#8212; Control Parameters Step 2026.10.30 documentation</title>
   
   
   
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
 <!-- End Google Tag Manager -->
 
-    <script src="_static/documentation_options.js?v=980f7468"></script>
+    <script src="_static/documentation_options.js?v=fcc0a42c"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2026.10.20" />
+  <meta name="docsearch:version" content="2026.10.30" />
   
     
     <script src="_static/searchtools.js"></script>
@@ -506,6 +506,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <section id="history">
 <h1>History<a class="headerlink" href="#history" title="Link to this heading">#</a></h1>
 <dl class="simple">
+<dt>2026.10.30 – Bugfix: lists of values lost their backslashes (Z double bonds in SMILES)</dt><dd><ul class="simple">
+<li><p>The default of a variable with one or more values, and the choices typed in the
+editor, were split with <code class="docutils literal notranslate"><span class="pre">shlex.split</span></code>, which treats a backslash as an escape
+and drops it. A default list of SMILES such as <code class="docutils literal notranslate"><span class="pre">C/C=C/C</span> <span class="pre">C/C=C\C</span></code> gave
+<code class="docutils literal notranslate"><span class="pre">C/C=CC</span></code> for the Z isomer, so it was built as E or with the stereo unspecified,
+unless each value was quoted. They are now split with
+<code class="docutils literal notranslate"><span class="pre">seamm_util.split_values</span></code>, which keeps backslashes; quotes work as before.
+Requires seamm-util 2026.10.30.</p></li>
+</ul>
+</dd>
 <dt>2026.10.20 – Bugfix: a variable defined with only some of its items</dt><dd><ul class="simple">
 <li><p>A flowchart made with seamm-flowchart or the MCP server could define a variable
 with only some items, e.g. its type, default and help. Reading the flowchart

@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>control_parameters_step.control_parameters &#8212; Control Parameters Step 2026.10.20 documentation</title>
+    <title>control_parameters_step.control_parameters &#8212; Control Parameters Step 2026.10.30 documentation</title>
   
   
   
@@ -47,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
 <!-- End Google Tag Manager -->
 
-    <script src="../../_static/documentation_options.js?v=980f7468"></script>
+    <script src="../../_static/documentation_options.js?v=fcc0a42c"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -61,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2026.10.20" />
+  <meta name="docsearch:version" content="2026.10.30" />
   
     
     <script src="../../_static/searchtools.js"></script>
@@ -574,7 +574,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>  <span class="c1"># noqa: F401</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">shlex</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">textwrap</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">tabulate</span><span class="w"> </span><span class="kn">import</span> <span class="n">tabulate</span>
@@ -615,6 +614,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <span class="s2">"zero or more values"</span><span class="p">:</span> <span class="s2">"*"</span><span class="p">,</span>
     <span class="s2">"one or more values"</span><span class="p">:</span> <span class="s2">"+"</span><span class="p">,</span>
 <span class="p">}</span>
+
+
+<div class="viewcode-block" id="default_value">
+<a class="viewcode-back" href="../../api/control_parameters_step.html#control_parameters_step.control_parameters.default_value">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">default_value</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""The default of a variable, converted to its type: a list for one or more</span>
+<span class="sd">    values.</span>
+
+<span class="sd">    The values are split with ``seamm_util.split_values``, which keeps backslashes,</span>
+<span class="sd">    such as those of Z double bonds in SMILES (``C/C=C\\C``); ``shlex.split`` dropped</span>
+<span class="sd">    them.</span>
+<span class="sd">    """</span>
+    <span class="n">type_</span> <span class="o">=</span> <span class="n">types</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]]</span>
+    <span class="k">if</span> <span class="s2">"more"</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">"nargs"</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">type_</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">seamm_util</span><span class="o">.</span><span class="n">split_values</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"default"</span><span class="p">])]</span>
+    <span class="k">return</span> <span class="n">type_</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"default"</span><span class="p">])</span></div>
+
 
 
 <div class="viewcode-block" id="ControlParameters">
@@ -922,10 +938,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="k">for</span> <span class="n">dest</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">variables</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">data_type</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span>
             <span class="n">type_</span> <span class="o">=</span> <span class="n">types</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
-            <span class="k">if</span> <span class="s2">"more"</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">"nargs"</span><span class="p">]:</span>
-                <span class="n">default</span> <span class="o">=</span> <span class="p">[</span><span class="n">type_</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"default"</span><span class="p">])]</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">default</span> <span class="o">=</span> <span class="n">type_</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"default"</span><span class="p">])</span>
+            <span class="n">default</span> <span class="o">=</span> <span class="n">default_value</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s2">"optional"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Yes"</span><span class="p">:</span>
                 <span class="n">name</span> <span class="o">=</span> <span class="s2">"--"</span> <span class="o">+</span> <span class="n">dest</span>
             <span class="k">else</span><span class="p">:</span>

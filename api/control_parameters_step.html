@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>control_parameters_step package &#8212; Control Parameters Step 2026.10.20 documentation</title>
+    <title>control_parameters_step package &#8212; Control Parameters Step 2026.10.30 documentation</title>
   
   
   
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
 <!-- End Google Tag Manager -->
 
-    <script src="../_static/documentation_options.js?v=980f7468"></script>
+    <script src="../_static/documentation_options.js?v=fcc0a42c"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -64,7 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2026.10.20" />
+  <meta name="docsearch:version" content="2026.10.30" />
   
     
     <script src="../_static/searchtools.js"></script>
@@ -697,6 +697,16 @@ parameters.</p>
 
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="control_parameters_step.control_parameters.default_value">
+<span class="sig-prename descclassname"><span class="pre">control_parameters_step.control_parameters.</span></span><span class="sig-name descname"><span class="pre">default_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_parameters_step/control_parameters.html#default_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_parameters_step.control_parameters.default_value" title="Link to this definition">#</a></dt>
+<dd><p>The default of a variable, converted to its type: a list for one or more
+values.</p>
+<p>The values are split with <code class="docutils literal notranslate"><span class="pre">seamm_util.split_values</span></code>, which keeps backslashes,
+such as those of Z double bonds in SMILES (<code class="docutils literal notranslate"><span class="pre">C/C=C\C</span></code>); <code class="docutils literal notranslate"><span class="pre">shlex.split</span></code> dropped
+them.</p>
+</dd></dl>
+
 </section>
 <section id="module-control_parameters_step.control_parameters_parameters">
 <span id="control-parameters-step-control-parameters-parameters-module"></span><h2>control_parameters_step.control_parameters_parameters module<a class="headerlink" href="#module-control_parameters_step.control_parameters_parameters" title="Link to this heading">#</a></h2>
@@ -1302,6 +1312,7 @@ A step for control parameters in SEAMM</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#control_parameters_step.control_parameters.ControlParameters.version"><code class="docutils literal notranslate"><span class="pre">ControlParameters.version</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control_parameters_step.control_parameters.default_value"><code class="docutils literal notranslate"><span class="pre">default_value()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-control_parameters_step.control_parameters_parameters">control_parameters_step.control_parameters_parameters module</a><ul class="pst-show_toc_level nav section-nav flex-column">
