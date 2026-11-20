@@ -14,7 +14,10 @@ import control_parameters_step  # noqa: F401
 import Pmw
 import pprint  # noqa: F401
 import tkinter as tk
+import tkinter.messagebox as messagebox
 import tkinter.ttk as ttk
+
+from .reserved import reserved_problem
 
 
 class TkControlParameters(seamm.TkNode):
@@ -463,11 +466,18 @@ class TkControlParameters(seamm.TkNode):
             self._new_variable_dialog.deactivate(result)
             raise RuntimeError(f"Don't recognize new variable dialog result '{result}'")
 
-        self._new_variable_dialog.deactivate(result)
-
-        name = self._new["name"].get()
+        name = self._new["name"].get().strip().lstrip("-")
+        if not self._name_is_usable(name, parent=self._new_variable_dialog):
+            return  # leave the dialog up to change the name
         if name in self._variables:
-            raise KeyError(f"Duplicate variable name: '{name}'")
+            messagebox.showerror(
+                "Duplicate name",
+                f"There is already a parameter named '{name}'.",
+                parent=self._new_variable_dialog.interior(),
+            )
+            return
+
+        self._new_variable_dialog.deactivate(result)
 
         data = self._variables[name] = {}
         for key, w in self._new.items():
@@ -668,9 +678,19 @@ class TkControlParameters(seamm.TkNode):
                 f"Don't recognize edit variable dialog result '{result}'"
             )
 
+        new_name = self._edit["name"].get().strip().lstrip("-")
+        if not self._name_is_usable(new_name, parent=self._edit_variable_dialog):
+            return  # leave the dialog up to change the name
+        if new_name != name and new_name in self._variables:
+            messagebox.showerror(
+                "Duplicate name",
+                f"There is already a parameter named '{new_name}'.",
+                parent=self._edit_variable_dialog.interior(),
+            )
+            return
+
         self._edit_variable_dialog.deactivate(result)
 
-        new_name = self._edit["name"].get().lstrip("-")
         if new_name == name:
             data = self._variables[name]
         else:
@@ -683,6 +703,25 @@ class TkControlParameters(seamm.TkNode):
                 data[key] = w.get()
 
         self.reset_table()
+
+    def _name_is_usable(self, name, parent=None):
+        """Whether a parameter can have this name, telling the user if not.
+
+        A name may not be empty, nor one of SEAMM's own job options (--memory,
+        --title, ...), which the job's command line already has.
+        """
+        if name == "":
+            problem = "The parameter needs a name."
+        else:
+            problem = reserved_problem(name)
+        if problem is None:
+            return True
+        messagebox.showerror(
+            "Reserved name" if name != "" else "No name",
+            problem,
+            parent=parent.interior() if parent is not None else None,
+        )
+        return False
 
     def remove_variable(self, name):
         """Remove a variable variable."""

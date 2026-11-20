@@ -1,6 +1,15 @@
 =======
 History
 =======
+2026.11.19 -- Bugfix: parameters named like SEAMM's own job options
+    * A parameter named like one of SEAMM's own job options, such as ``memory``,
+      ``title`` or ``ncores``, stopped the job at the start with the obscure error
+      "argument --memory: conflicting option string". Such names are now refused in
+      the editor, reported when the flowchart is checked (``seamm-flowchart
+      validate``, submitting a job), and, for a flowchart made earlier, stop the job
+      with a message naming the parameter and how to rename it. The names are listed
+      in the User Guide; ``cores``, ``hours``, ``time`` and ``queue`` are fine.
+
 2026.10.30 -- Bugfix: lists of values lost their backslashes (Z double bonds in SMILES)
     * The default of a variable with one or more values, and the choices typed in the
       editor, were split with ``shlex.split``, which treats a backslash as an escape
