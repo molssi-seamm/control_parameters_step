@@ -91,6 +91,7 @@ import textwrap
 from tabulate import tabulate
 
 import control_parameters_step
+from .reserved import reserved_problems
 import seamm
 import seamm_util
 from seamm_util import ureg, Q_  # noqa: F401
@@ -416,6 +417,31 @@ class ControlParameters(seamm.Node):
 
         return next_node
 
+    def check_flowchart(self, preceding):
+        """Check the names of the parameters before the job runs.
+
+        Called by SEAMM's flowchart checks (the editor, ``seamm-flowchart
+        validate`` and submitting a job), so a parameter named like one of SEAMM's
+        own job options is caught before the job is queued.
+
+        Parameters
+        ----------
+        preceding : [seamm.Node]
+            The steps that run before this one (not used).
+
+        Returns
+        -------
+        [str]
+            The problems found; empty if none.
+        """
+        P = self.parameters
+        if P is None or "variables" not in P:
+            return []
+        variables = P["variables"].value
+        if not isinstance(variables, dict):
+            return []
+        return [f"'{self.title}': {p}" for p in reserved_problems(variables.keys())]
+
     def create_parser(self):
         """Setup the command-line / config file parser"""
         parser_name = "control-parameters-step"
@@ -432,6 +458,17 @@ class ControlParameters(seamm.Node):
         # the options -- and they are in the SEAMM space. So set that up here
 
         variables = self.parameters["variables"].value
+
+        # A parameter named like one of SEAMM's own job options (--memory, --title,
+        # ...) would make argparse fail with an obscure conflict, or silently share
+        # the option's value, so stop with a clear message instead.
+        problems = reserved_problems(variables.keys(), parser=parser)
+        if len(problems) > 0:
+            raise ValueError(
+                f"{self.title}: " + " ".join(problems) + " The names reserved for "
+                "SEAMM's job options are listed in the Parameters step's "
+                "documentation."
+            )
 
         # plugins = parser.add_argument_group('plug-ins')
         for dest, data in variables.items():
